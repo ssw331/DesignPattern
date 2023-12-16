@@ -2,15 +2,13 @@ package DataAccessObject;
 
 import java.util.List;
 
-/**
- * @author Bestom
- *
- * 游乐场的员工类的数据操作接口类
- */
+//对员工管理的操作接口
 public interface EmployeeDao {
     public List<Employee> getAllEmployees();
+    public List<Employee> getEmployeesByGender(String gender);
     public Employee getEmployee(int id);
-    public void updateEmployee(int id, double salary);
+    public void updateSalary(int id, double salary);
     public void deleteEmployee(int id);
-    public int addEmployee(String name, double salary);
+    public int addEmployee(String name,String gender ,double salary);
+    public void toString(Employee e);
 }

@@ -3,6 +3,7 @@ package DataAccessObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Bestom
@@ -14,37 +15,41 @@ public class EmployeeDaoImpl implements EmployeeDao{
     /**
      * 列表当作数据库
      */
-    private final List<Employee> employees;
-    private int nextId;
+    private final List<Employee> employees;//存放员工列表
+    private int nextId;//用于模拟数据库主键自增
 
     /**
      * 游乐场的员工的数据操作类的构造函数
      */
     public EmployeeDaoImpl(){
-        employees = new ArrayList<Employee>();
+        employees = new ArrayList<>();
         nextId = 0;
     }
 
-    /**
-     * 获取当前游乐场的所有员工数据
-     * @return 包含所有员工对象的数组
-     */
+    //获取存放所有员工数据的列表
     @Override
     public List<Employee> getAllEmployees() {
-
-        System.out.printf("查找所有员工\n");
+        System.out.println("查找所有员工");
         return this.employees;
     }
 
-    /**
-     * 获取当前游乐场的某个id的员工
-     * @param id 要查询的id
-     * @return 如果有匹配的id则返回员工信息，否则返回null
-     */
+    @Override
+    public List<Employee> getEmployeesByGender(String gender) {
+        System.out.println("查找所有性别为"+gender+"的员工: ");
+        List<Employee> res=new ArrayList<>();
+        for (Employee employee :this.employees) {
+            if (Objects.equals(employee.getGender(), gender)) {
+                res.add(employee);
+            }
+        }
+        return res;
+    }
+
+    //通过id查找员工
     @Override
     public Employee getEmployee(int id) {
 
-        System.out.printf("查找员工: "+String.valueOf(id)+"\n");
+        System.out.println("查找员工: "+ id);
         for (Employee employee :this.employees) {
             if (employee.getId() == id) {
                 return employee;
@@ -53,16 +58,11 @@ public class EmployeeDaoImpl implements EmployeeDao{
         return null;
     }
 
-    /**
-     * 更新游乐场的某个员工信息
-     * 如果有匹配的id则更新员工信息，否则等价为空操作
-     * @param id 员工id
-     * @param salary 员工最新薪水
-     */
+    //更新某个员工的工资
     @Override
-    public void updateEmployee(int id, double salary) {
+    public void updateSalary(int id, double salary) {
 
-        System.out.printf("更新员工: "+String.valueOf(id) + " 最新薪水: " + String.valueOf(salary)+"\n");
+        System.out.println("更新员工: "+ id + " 最新薪水: " + salary);
         for (Employee employee : this.employees) {
             if (employee.getId() == id) {
                 employee.setSalary(salary);
@@ -71,15 +71,11 @@ public class EmployeeDaoImpl implements EmployeeDao{
         }
     }
 
-    /**
-     * 删除游乐场的某个员工信息
-     * 如果有匹配的id则删除员工信息，否则等价为空操作
-     * @param id 需要删除的员工的id
-     */
+    //删除某个员工信息
     @Override
     public void deleteEmployee(int id) {
 
-        System.out.printf("删除员工: "+String.valueOf(id)+"\n");
+        System.out.println("删除员工: "+ id);
         for (int i=0;i<this.employees.size();++i) {
             if (this.employees.get(i).getId() == id) {
                 this.employees.remove(i);
@@ -88,19 +84,18 @@ public class EmployeeDaoImpl implements EmployeeDao{
         }
     }
 
-    /**
-     * 增加游乐场的某个员工信息
-     * @param name 需要增加的员工的姓名
-     * @param salary 需要增加的员工的薪水
-     * @return 新加入员工被分配的id
-     */
+    //新增某个员工信息
     @Override
-    public int addEmployee(String name, double salary) {
+    public int addEmployee(String name,String gender, double salary) {
 
-        System.out.printf("加入员工: "+String.valueOf(name) + " 薪水为: "+String.valueOf(salary)+"\n");
-
-        Employee newEmployee = new Employee(this.nextId++, name, salary);
+        System.out.println("加入员工: "+name+" 性别为："+gender+" 薪水为: "+ salary);
+        Employee newEmployee = new Employee(this.nextId++, name,gender, salary);
         this.employees.add(newEmployee);
         return newEmployee.getId();
+    }
+
+    @Override
+    public void toString(Employee e) {
+        System.out.println("员工："+e.getName()+" 性别："+e.getGender()+" 薪资："+e.getSalary());
     }
 }
