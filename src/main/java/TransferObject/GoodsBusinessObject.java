@@ -2,69 +2,37 @@ package TransferObject;
 
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * @author Bestom
- *
- * 设施业务对象
- */
-
+//货物操作类
 public class GoodsBusinessObject {
-    private Map<Integer,GoodsTransferObject> goodMap;
-
-    /**
-     * GoodBusinessObject构造器
-     */
+    private Map<Integer,GoodsTransferObject> goodMap;//id→货物实体
     public GoodsBusinessObject(){
-        goodMap = new HashMap<Integer, GoodsTransferObject>();
-
-        System.out.printf("GoodBusinessObject构造器\n");
+        goodMap = new HashMap<>();
+        System.out.println("已构造GoodBusinessObject");
     }
-
-    /**
-     * 添加货物
-     */
+    //增
     public void addGood(GoodsTransferObject good){
         goodMap.put(good.getId(),good);
-
-        System.out.printf("添加货物\n");
+        System.out.println("添加货物");
     }
-
-    /**
-     * 移除货物
-     */
+    //删
     public void deleteGood(GoodsTransferObject good){
         goodMap.remove(good.getId());
-
-        System.out.printf("移除货物\n");
-        System.out.println(good.getName()+" 已经被移除\n");
+        System.out.println("移除货物");
+        System.out.println(good.getName()+" 已经被移除");
     }
-
-    /**
-     * 获取货物表
-     */
+    //获取全部货物
     public Map<Integer,GoodsTransferObject> getAllGoods(){
-
-        System.out.printf("获取货物表\n");
+        System.out.println("获取货物表");
         return goodMap;
     }
-
-    /**
-     * 获取货物信息
-     */
+    //通过id查找货物
     public GoodsTransferObject getGood(int id){
-
-        System.out.printf("获取货物信息\n");
+        System.out.println("获取货物信息");
         return goodMap.get(id);
     }
-
-    /**
-     * 更新货物数据
-     */
     public void updateGood(GoodsTransferObject good){
-        System.out.printf("更新货物数据\n");
-
+        System.out.println("更新货物数据");
         goodMap.put(good.getId(),good);
-        System.out.println("货物数据已更新\n");
+        System.out.println("货物数据已更新");
     }
 }
