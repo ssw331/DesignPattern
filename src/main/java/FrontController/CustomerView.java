@@ -1,10 +1,8 @@
 package FrontController;
 
-/**
- * 创建游客界面视图
- */
+//游客界面
 public class CustomerView {
     public void show(){
-        System.out.println("展示顾客界面");
+        System.out.println("展示游客界面");
     }
 }

@@ -1,9 +1,7 @@
 package FrontController;
 
 
-/**
- * 创建调度器
- */
+//调度器，负责分发相应的页面
 public class Dispatcher {
     private CustomerView customerView;
     private ManagerView managerView;
@@ -12,14 +10,11 @@ public class Dispatcher {
         managerView = new ManagerView();
     }
 
-    /**
-     * 判断需要进入哪个视图中
-     * @param request 为request创建指定视图
-     */
+    //判断应该展示哪个视图
     public void dispatch(String request){
-        if(request.equalsIgnoreCase("顾客")){
+        if(request.equals("游客")){
             customerView.show();
-        }else if(request.equalsIgnoreCase("管理员")){
+        }else if(request.equals("管理员")){
             managerView.show();
         }else{
             System.out.println("404 Not Found");
