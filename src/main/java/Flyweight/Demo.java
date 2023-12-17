@@ -45,7 +45,6 @@ public class Demo {
         System.out.println("请输入优惠政策：");
         if (scanner.hasNextLine()) {
             bonus = scanner.nextLine();
-            scanner.nextLine();
         }
         ticket.setBonus(bonus);
         System.out.println("按下回车键撤销此次建立...");
