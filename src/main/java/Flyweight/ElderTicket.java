@@ -1,16 +1,28 @@
 package Flyweight;
 
+import State.State;
+
 public class ElderTicket implements Ticket {
 
     private String date;  // 入园时间
     private double price;
     private String bonus;
+    private State state;
 
     public ElderTicket(String date) {
         setDate(date);
         createTicket();
     }
 
+    @Override
+    public State getState() {
+        return state;
+    }
+
+    @Override
+    public void setState(State state) {
+        this.state = state;
+    }
     @Override
     public String getDate() {
         return date;

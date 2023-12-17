@@ -1,5 +1,7 @@
 package Flyweight;
 
+import State.State;
+
 public interface Ticket {
     void createTicket();  // 创建票种的信息提示
 
@@ -12,6 +14,10 @@ public interface Ticket {
     String getBonus();
 
     String getType();
+
+    State getState();
+
+    void setState(State state);
 
     String getDate();
 

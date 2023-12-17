@@ -1,5 +1,4 @@
-package Flyweight;
-
+import Flyweight.Ticket;
 import Singleton.TicketFactory;
 
 import java.util.*;

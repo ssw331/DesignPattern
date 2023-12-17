@@ -1,10 +1,13 @@
 package Flyweight;
 
+import State.State;
+
 public class ChildTicket implements Ticket {
 
     private String date;  // 入园时间
     private double price;
     private String bonus;
+    private State state;
 
     public ChildTicket(String date) {
         setDate(date);
@@ -49,5 +52,15 @@ public class ChildTicket implements Ticket {
     @Override
     public String getType() {
         return "Child";
+    }
+
+    @Override
+    public State getState() {
+        return state;
+    }
+
+    @Override
+    public void setState(State state) {
+        this.state = state;
     }
 }
