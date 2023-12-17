@@ -29,7 +29,7 @@ public class TicketFactory {
         System.out.println("此票种的优惠政策为：" + ticket.getBonus());
         ticketMap.remove(date + type);
     }
-    public void createTicket(String date, String type) {
+    public void createTicket(String date, String type) {  // 用于保证票务信息被传入数据库
         Ticket ticket = ticketMap.get(date + type);
         Creating creating = new Creating();
         creating.doAction(ticket);
@@ -43,9 +43,9 @@ public class TicketFactory {
     public AdultTicket getAdultTicket(String date, String type) {
         AdultTicket adultTicket = (AdultTicket) ticketMap.get(date + type);  // 通过类型和日期映射实例，防止不同类型同日期的实例无法被映射
         if (adultTicket == null) {
-            createTicket(date, type);
             adultTicket = new AdultTicket(date);
             ticketMap.put(date + type, adultTicket);
+            createTicket(date, type);
             existStateDetect(adultTicket);
         }
 
@@ -55,9 +55,9 @@ public class TicketFactory {
     public ChildTicket getChildTicket(String date, String type) {
         ChildTicket childTicket = (ChildTicket) ticketMap.get(date + type);
         if (childTicket == null) {
-            createTicket(date, type);
             childTicket = new ChildTicket(date);
             ticketMap.put(date + type, childTicket);
+            createTicket(date, type);
             existStateDetect(childTicket);
         }
 
@@ -67,9 +67,9 @@ public class TicketFactory {
     public ElderTicket getElderTicket(String date, String type) {
         ElderTicket elderTicket = (ElderTicket) ticketMap.get(date + type);
         if (elderTicket == null) {
-            createTicket(date, type);
             elderTicket = new ElderTicket(date);
             ticketMap.put(date + type, elderTicket);
+            createTicket(date, type);
             existStateDetect(elderTicket);
         }
 
