@@ -7,7 +7,7 @@ package decorator;
 /* *
  * 装饰器类，添加音乐效果
  */
-class MusicDecorator extends CarDecorator {
+public class MusicDecorator extends CarDecorator {
     public MusicDecorator(Car decoratedCar) {
         super(decoratedCar);
     }

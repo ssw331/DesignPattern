@@ -7,7 +7,7 @@ package decorator;
 /* *
  * 装饰器类，添加灯光效果
  */
-class LightsDecorator extends CarDecorator {
+public class LightsDecorator extends CarDecorator {
     public LightsDecorator(Car decoratedCar) {
         super(decoratedCar);
     }
