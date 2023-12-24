@@ -22,18 +22,26 @@ public class TicketFactory {
     }
     public void destroyTicket(String date, String type) {
         Ticket ticket = ticketMap.get(date + type);
-        Destroying destroying = new Destroying();
-        destroying.doAction(ticket);
-        System.out.println(ticket.getState());
-        System.out.println("票务撤销了" + ticket.getDate() + "的票种：" + ticket.getType() + "。此时的票价为：" + ticket.getPrice());
-        System.out.println("此票种的优惠政策为：" + ticket.getBonus());
-        ticketMap.remove(date + type);
+        if (ticket != null) {
+            Destroying destroying = new Destroying();
+            destroying.doAction(ticket);
+            System.out.println(ticket.getState());
+            System.out.println("票务撤销了" + ticket.getDate() + "的票种：" + ticket.getType() + "。此时的票价为：" + ticket.getPrice());
+            System.out.println("此票种的优惠政策为：" + ticket.getBonus());
+            ticketMap.remove(date + type);
+        } else {
+            System.out.println("不存在此票种。");
+        }
     }
     public void createTicket(String date, String type) {  // 用于保证票务信息被传入数据库
         Ticket ticket = ticketMap.get(date + type);
-        Creating creating = new Creating();
-        creating.doAction(ticket);
-        System.out.println(ticket.getState());
+        if (ticket != null) {
+            Creating creating = new Creating();
+            creating.doAction(ticket);
+            System.out.println(ticket.getState());
+        } else {
+            System.out.println("创建失败...");
+        }
     }
     public void existStateDetect(Ticket ticket) {
         Existing existing = new Existing();
