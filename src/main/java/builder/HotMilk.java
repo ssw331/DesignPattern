@@ -2,7 +2,7 @@ package builder;
 /**
  * @author WWWsy
  */
-public class AbstractHotMilk extends AbstractHotDrink {
+public class HotMilk extends AbstractHotDrink {
 
     @Override
     public String name() {

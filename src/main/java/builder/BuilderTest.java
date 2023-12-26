@@ -26,7 +26,7 @@ public class BuilderTest {
                 } else if (choice == 4) {
                     items.add(new LemonTea());
                 } else if (choice == 5) {
-                    items.add(new AbstractHotMilk());
+                    items.add(new HotMilk());
                 } else if (choice == 6) {
                     items.add(new FrenchFries());
                 } else if (choice == 7) {
