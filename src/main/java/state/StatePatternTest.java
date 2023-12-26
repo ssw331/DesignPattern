@@ -1,4 +1,4 @@
-package test;
+package state;
 
 import state.RegularVisitorState;
 import state.VIPVisitorState;

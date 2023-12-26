@@ -1,4 +1,4 @@
-package test;
+package proxy;
 
 
 import proxy.ChildTicketService;
