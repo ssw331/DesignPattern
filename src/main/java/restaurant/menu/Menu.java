@@ -1,7 +1,5 @@
 package restaurant.menu;
 
-import lombok.NoArgsConstructor;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,7 +21,7 @@ public class Menu implements Iterable<Orderable> {
 
     private class MenuIterator implements Iterator<Orderable> {
 
-        int index;
+        int index = 0;
 
         @Override
         public boolean hasNext() {
@@ -32,7 +30,7 @@ public class Menu implements Iterable<Orderable> {
 
         @Override
         public Orderable next() {
-            return hasNext() ? items.get(index) : null;
+            return hasNext() ? items.get(index++) : null;
         }
     }
 }

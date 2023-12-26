@@ -16,7 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class RestaurantTest {
-    private final Menu menu = new Menu();
+    private static final Menu menu = new Menu();
 
     @BeforeEach
     public void beforeEach() {
@@ -180,8 +180,9 @@ public class RestaurantTest {
         System.out.println("迭代器获取成功，类型检查通过，菜单可以被迭代。");
 
         System.out.println("开始迭代");
-        for(var item: menu){
-            System.out.printf("菜单项：%s - $%f%n", item.getName(), item.getPrice());
+        while(iter.hasNext()){
+            var next = iter.next();
+            System.out.printf("菜单项：%s - $%f%n", next.getName(), next.getPrice());
         }
         System.out.println("迭代结束");
 
