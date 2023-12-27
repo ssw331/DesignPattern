@@ -1,16 +1,16 @@
 package TourBusStationSubSystem;
-import TourBusStationSubSystem.Bridge.Blue;
-import TourBusStationSubSystem.Bridge.Pink;
-import TourBusStationSubSystem.Bridge.Yellow;
-import TourBusStationSubSystem.Decorator.BusDecorator;
-import TourBusStationSubSystem.Decorator.TourGuideBusDecorator;
-import TourBusStationSubSystem.Filter.*;
-import TourBusStationSubSystem.ObjectPool.BusPool;
-import TourBusStationSubSystem.ObjectPool.StartSightseeing;
-import TourBusStationSubSystem.Prototype.BusCache;
-import TourBusStationSubSystem.Prototype.LargeTourBus;
-import TourBusStationSubSystem.Prototype.MediumTourBus;
-import TourBusStationSubSystem.Prototype.SmallTourBus;
+import TourBusStationSubSystem.bridge.Blue;
+import TourBusStationSubSystem.bridge.Pink;
+import TourBusStationSubSystem.bridge.Yellow;
+import TourBusStationSubSystem.decorator.BusDecorator;
+import TourBusStationSubSystem.decorator.TourGuideBusDecorator;
+import TourBusStationSubSystem.filter.*;
+import TourBusStationSubSystem.objectPool.BusPool;
+import TourBusStationSubSystem.objectPool.StartSightseeing;
+import TourBusStationSubSystem.prototype.BusCache;
+import TourBusStationSubSystem.prototype.LargeTourBus;
+import TourBusStationSubSystem.prototype.MediumTourBus;
+import TourBusStationSubSystem.prototype.SmallTourBus;
 
 
 import java.util.Random;

@@ -1,6 +1,6 @@
 package TourBusStationSubSystem;
 
-import TourBusStationSubSystem.Bridge.Stylized;
+import TourBusStationSubSystem.bridge.Stylized;
 import lombok.Data;
 
 import java.util.concurrent.atomic.AtomicInteger;
