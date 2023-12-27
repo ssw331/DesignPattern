@@ -1,7 +1,8 @@
 package TourBusStationSubSystem;
 
-import TourBusStationSubSystem.bridge.Stylized;
+import TourBusStationSubSystem.bridge.PaintColor;
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -20,6 +21,7 @@ public abstract class TourBus implements Cloneable, Bus {
     final public static int busClassNum = 3;
 
     // 观光车的唯一标识
+    @Getter
     private int busId;
 
     // 观光车的名称
@@ -28,16 +30,16 @@ public abstract class TourBus implements Cloneable, Bus {
     // 观光车的座位数量
     private int seatNum;
 
-    // 观光车的颜色，使用桥接模式中的 Stylized 接口
-    private Stylized color;
+    // 观光车的颜色，使用桥接模式中的 PaintColor 接口
+    private PaintColor color;
 
     /**
      * 带颜色参数的构造函数。
-     * 使用桥接模式中的 Stylized 接口设置观光车的颜色。
+     * 使用桥接模式中的 PaintColor 接口设置观光车的颜色。
      *
      * @param color 观光车的颜色
      */
-    public TourBus(Stylized color) {
+    public TourBus(PaintColor color) {
         this.busId = TourBus.curBusNum.incrementAndGet();
         this.color = color;
     }

@@ -1,5 +1,5 @@
 package TourBusStationSubSystem.bridge;
 
-public interface Stylized {
+public interface PaintColor {
     String paint();
 }

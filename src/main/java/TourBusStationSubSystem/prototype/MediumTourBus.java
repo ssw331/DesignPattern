@@ -1,6 +1,6 @@
 package TourBusStationSubSystem.prototype;
 
-import TourBusStationSubSystem.bridge.Stylized;
+import TourBusStationSubSystem.bridge.PaintColor;
 import TourBusStationSubSystem.TourBus;
 
 /**
@@ -13,9 +13,9 @@ public class MediumTourBus extends TourBus {
     /**
      * 使用指定的颜色创建一个中型观光车。
      *
-     * @param color 实现 Stylized 接口的对象，用于设置车辆的颜色。
+     * @param color 实现 PaintColor 接口的对象，用于设置车辆的颜色。
      */
-    public MediumTourBus(Stylized color) {
+    public MediumTourBus(PaintColor color) {
         super(color);
         this.setSeatNum(4); // 设置座位数为4
     }
