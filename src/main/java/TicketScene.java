@@ -7,7 +7,7 @@ import interpreter.Expression;
 
 import java.util.*;
 
-public class Demo {
+public class TicketScene {
     private static final TicketFactory ticketFactory = TicketFactory.getTicketFactory();
 
     public static void main(String[] args) {

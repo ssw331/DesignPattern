@@ -17,6 +17,7 @@ public class TicketFactory {
     TicketFactory() {
         System.out.println("正在创建唯一存在实例票务生成系统...");
     }
+
     public static TicketFactory getTicketFactory() {
         return ticketFactory;
     }
@@ -55,6 +56,8 @@ public class TicketFactory {
             ticketMap.put(date + type, adultTicket);
             createTicket(date, type);
             existStateDetect(adultTicket);
+        } else {
+            existStateDetect(adultTicket);
         }
 
         return adultTicket;
@@ -67,6 +70,8 @@ public class TicketFactory {
             ticketMap.put(date + type, childTicket);
             createTicket(date, type);
             existStateDetect(childTicket);
+        } else {
+            existStateDetect(childTicket);
         }
 
         return childTicket;
@@ -78,6 +83,8 @@ public class TicketFactory {
             elderTicket = new ElderTicket(date);
             ticketMap.put(date + type, elderTicket);
             createTicket(date, type);
+            existStateDetect(elderTicket);
+        } else {
             existStateDetect(elderTicket);
         }
 
