@@ -35,7 +35,7 @@ public class StartSightseeing implements Runnable {
         TourBus bus = pool.borrowObject();
         // 模拟观光车出发的情景
         // 线程threadId从对象池中借用了编号为bus.getBusId()的观光车
-        System.out.printf("游览线路%d已启动：编号%d的观光车上游客已上车，正前往观光地点。\n", threadId, bus.getBusId());
+        System.out.printf("游览线路 %d 已启动：编号 %d 的观光车上游客已上车，正前往观光地点。\n", threadId, bus.getBusId());
 
         // ... 模拟观光过程 ...
 
@@ -43,6 +43,6 @@ public class StartSightseeing implements Runnable {
         pool.returnObject(bus);
         // 模拟观光车返回的情景
         // 线程threadId已经完成任务，将bus.getBusId()归还到对象池
-        System.out.printf("游览线路%d已结束：编号%d的观光车已返回，游客已下车，车辆准备迎接下一批游客。\n", threadId, bus.getBusId());
+        System.out.printf("游览线路 %d 已结束：编号 %d 的观光车已返回，游客已下车，车辆准备迎接下一批游客。\n", threadId, bus.getBusId());
     }
 }
