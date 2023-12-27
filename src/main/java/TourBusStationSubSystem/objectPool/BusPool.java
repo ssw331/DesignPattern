@@ -19,31 +19,6 @@ public abstract class BusPool<T> {
     // 用于执行定时任务的线程池。
     private ScheduledExecutorService executorService;
 
-    /**
-     * 从对象池中借用对象。
-     * 如果池中没有可用对象，则创建一个新对象。
-     *
-     * @return 池中的一个对象或一个新创建的对象
-     */
-    public T borrowObject() {
-        T object;
-        if ((object = pool.poll()) == null) {
-            object = createObject();
-        }
-        return object;
-    }
-
-    /**
-     * 将对象返回到池中。
-     *
-     * @param object 要返回到池中的对象
-     */
-    public void returnObject(T object) {
-        if (object == null) {
-            return;
-        }
-        this.pool.offer(object);
-    }
 
     /**
      * 构造函数初始化对象池，并设置定时任务以维护池的大小。
@@ -95,7 +70,31 @@ public abstract class BusPool<T> {
             executorService.shutdown();
         }
     }
+    /**
+     * 从对象池中借用对象。
+     * 如果池中没有可用对象，则创建一个新对象。
+     *
+     * @return 池中的一个对象或一个新创建的对象
+     */
+    public T borrowObject() {
+        T object;
+        if ((object = pool.poll()) == null) {
+            object = createObject();
+        }
+        return object;
+    }
 
+    /**
+     * 将对象返回到池中。
+     *
+     * @param object 要返回到池中的对象
+     */
+    public void returnObject(T object) {
+        if (object == null) {
+            return;
+        }
+        this.pool.offer(object);
+    }
     /**
      * 创建一个新对象的抽象方法。
      * 子类需要重写此方法以提供对象的创建逻辑。

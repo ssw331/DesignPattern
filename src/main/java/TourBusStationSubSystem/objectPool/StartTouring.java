@@ -6,7 +6,7 @@ import TourBusStationSubSystem.TourBus;
  * 实现 Runnable 接口的观光车任务类。
  * 用于模拟从对象池中借用观光车，执行任务，然后将其返回的过程。
  */
-public class StartSightseeing implements Runnable {
+public class StartTouring implements Runnable {
 
     // 对象池引用，用于借用和返回观光车。
     private BusPool<TourBus> pool;
@@ -20,7 +20,7 @@ public class StartSightseeing implements Runnable {
      * @param pool 对象池引用
      * @param threadId 线程或游览线路的ID
      */
-    public StartSightseeing(BusPool<TourBus> pool, int threadId) {
+    public StartTouring(BusPool<TourBus> pool, int threadId) {
         this.pool = pool;
         this.threadId = threadId;
     }

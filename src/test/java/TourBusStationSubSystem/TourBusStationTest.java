@@ -6,7 +6,7 @@ import TourBusStationSubSystem.decorator.BusDecorator;
 import TourBusStationSubSystem.decorator.TourGuideBusDecorator;
 import TourBusStationSubSystem.filter.*;
 import TourBusStationSubSystem.objectPool.BusPool;
-import TourBusStationSubSystem.objectPool.StartSightseeing;
+import TourBusStationSubSystem.objectPool.StartTouring;
 import TourBusStationSubSystem.prototype.BusCache;
 import TourBusStationSubSystem.prototype.LargeTourBus;
 import TourBusStationSubSystem.prototype.MediumTourBus;
@@ -167,7 +167,7 @@ public class TourBusStationTest {
         System.out.println("---------------------------对象池模式测试开始----------------------------");
 
         // 初始化对象池
-        BusPool<TourBus> pool = new BusPool<>(10, 20, 5) {
+        BusPool<TourBus> pool = new BusPool<>(5, 10, 5) {
             @Override
             protected TourBus createObject() {
                 Random random = new Random();
@@ -182,10 +182,10 @@ public class TourBusStationTest {
         };
 
         // 测试对象池并发使用
-        int threadNum = 15;
+        int threadNum = 6;
         ExecutorService executor = Executors.newFixedThreadPool(threadNum);
         for (int i = 1; i <= threadNum; i++) {
-            executor.execute(new StartSightseeing(pool, i));
+            executor.execute(new StartTouring(pool, i));
         }
         executor.shutdown();
         try {

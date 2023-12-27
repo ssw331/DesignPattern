@@ -29,23 +29,14 @@ public class BusCache {
      * 此方法初始化不同类型的观光车并将它们放入缓存。
      */
     public static void loadCache() {
-        Integer totalSmall = 3, totalMedium = 2, totalLarge = 4;
-        for(int i=0;i<totalSmall;i++){
-            SmallTourBus smallBus = new SmallTourBus();
-            busMap.put(smallBus.getName(), smallBus);
-        }
-        for(int i=0;i<totalMedium;i++){
-            MediumTourBus mediumBus = new MediumTourBus();
-            busMap.put(mediumBus.getName(), mediumBus);
-        }
-        for(int i=0;i<totalLarge;i++){
-            LargeTourBus largeBus = new LargeTourBus();
-            busMap.put(largeBus.getName(), largeBus);
-        }
+        SmallTourBus smallBus = new SmallTourBus();
+        busMap.put(smallBus.getName(), smallBus);
 
-        System.out.println("现在有 "+totalSmall.toString()+" 辆小型观光车，编号为 1,2,3");
-        System.out.println("现在有 "+totalMedium.toString()+" 辆小型观光车，编号为 4,5");
-        System.out.println("现在有 "+totalLarge.toString()+" 辆小型观光车，编号为 6,7,8,9");
+        MediumTourBus mediumBus = new MediumTourBus();
+        busMap.put(mediumBus.getName(), mediumBus);
+
+        LargeTourBus largeBus = new LargeTourBus();
+        busMap.put(largeBus.getName(), largeBus);
     }
 
     /**

@@ -2,7 +2,7 @@ package TourBusStationSubSystem;
 
 import TourBusStationSubSystem.filter.*;
 import TourBusStationSubSystem.objectPool.BusPool;
-import TourBusStationSubSystem.objectPool.StartSightseeing;
+import TourBusStationSubSystem.objectPool.StartTouring;
 import TourBusStationSubSystem.prototype.LargeTourBus;
 import TourBusStationSubSystem.prototype.MediumTourBus;
 import TourBusStationSubSystem.prototype.SmallTourBus;
@@ -49,7 +49,7 @@ public class TourBusStationSceneAdminTest {
         ExecutorService executor = Executors.newFixedThreadPool(totalBusNum);
         System.out.println("分配线程执行租赁任务...");
         for (int i = 1; i <= totalBusNum; i++) {
-            StartSightseeing task = new StartSightseeing(busPool, i);
+            StartTouring task = new StartTouring(busPool, i);
             executor.execute(task);
         }
 
