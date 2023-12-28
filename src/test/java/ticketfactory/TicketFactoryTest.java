@@ -4,6 +4,7 @@ import Flyweight.AdultTicket;
 import Flyweight.Ticket;
 import Singleton.TicketFactory;
 import State.Creating;
+import State.Destroying;
 import State.Existing;
 import interpreter.Context;
 import interpreter.CustomerExpression;
@@ -33,7 +34,7 @@ class TicketFactoryTest {
         System.out.println("*****************************【单例模式展示】****************************");
         System.out.println("# 单例模式主要作用于一个系统中会被频繁使用的类，避免对这个类的对象的频繁创建和销毁");
         System.out.println("# 主要的实现思路为：在需要调用该类时对其进行检查，如果存在则返回实例，否则创建新的实例");
-        System.out.println("# 通过将构造函数私有化和静态成员实例，使得单例类的实例创建在程序运行开始时建进行，保证实例唯一");
+        System.out.println("# 通过将构造函数私有化和静态成员实例，使得TicketFactory的实例创建在程序运行开始时建进行，保证实例唯一");
         System.out.println("**********************************************************************");
         System.out.println();
 
@@ -92,7 +93,7 @@ class TicketFactoryTest {
         System.out.println();
 
         System.out.println("---------------------------状态模式测试开始----------------------------");
-        System.out.println("票种从创建状态到已存在状态的切换和对应的行为");
+        System.out.println("票种从创建状态到已存在状态再到销毁状态的切换和对应的行为");
         System.out.println("---------------------------------------------------------------------");
 
         ticket = new AdultTicket(date);
@@ -103,6 +104,10 @@ class TicketFactoryTest {
         Existing existing = new Existing();
         existing.doAction(ticket);
         ticket.setState(existing);
+
+        Destroying destroying = new Destroying();
+        destroying.doAction(ticket);
+        ticket.setState(destroying);
 
         System.out.println("---------------------------状态模式测试结束----------------------------");
         System.out.println();
