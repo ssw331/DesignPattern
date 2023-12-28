@@ -34,9 +34,9 @@ public class TicketScene {
             if (scanner.hasNextLine()) {
                 String ag = scanner.nextLine();
                 String[] ags = ag.split(" ");
-                if(ags.length <= 1) {
+                if (ags.length <= 1) {
                     System.out.println("参数不足，请重新输入");
-                    continue ;
+                    continue;
                 }
                 date = ags[0];
                 type = ags[1];
@@ -70,7 +70,7 @@ public class TicketScene {
         System.out.println("请输入优惠政策：");
         while (true) {
             if (scanner.hasNextLine()) {
-                bonus =  scanner.nextLine();
+                bonus = scanner.nextLine();
                 break;
             }
             scanner.nextLine();
@@ -84,50 +84,54 @@ public class TicketScene {
 
         double ticketPrice;
 
-        System.out.println("请在一行内输入输入购买者身份信息（成人、儿童、老人、退伍军人、残疾人）以及是否为VIP（是、否），用空格隔开：");
+        for (int i = 0; i <= 1; i++) {
+            System.out.println();
+            System.out.println("请在一行内输入输入购买者身份信息（成人、儿童、老人、退伍军人、残疾人）以及是否为VIP（是、否），用空格隔开：");
 
-        buy:
-        while (true) {
-            if (scanner.hasNextLine()) {
-                String ag = scanner.nextLine();
-                String[] ags = ag.split(" ");
-                if(ags.length <= 1) {
-                    System.out.println("参数不足，请重新输入");
-                    continue ;
+            buy:
+            while (true) {
+                if (scanner.hasNextLine()) {
+                    String ag = scanner.nextLine();
+                    String[] ags = ag.split(" ");
+                    if(ags.length <= 1) {
+                        System.out.println("参数不足，请重新输入");
+                        continue ;
+                    }
+                    type = ags[0];
+                    if (Objects.equals(ags[1], "是")) {
+                        isVIP = true;
+                    }
                 }
-                type = ags[0];
-                if (Objects.equals(ags[1], "是")) {
-                    isVIP = true;
+                switch (type) {
+                    case "成人":
+                        context.setCustomerInfo("ADULT", isVIP);
+                        ticketPrice = customerExpression.interpret(context, ticketFactory.getAdultTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "成人"));
+                        break buy;
+                    case "儿童":
+                        context.setCustomerInfo("CHILD", isVIP);
+                        ticketPrice = customerExpression.interpret(context, ticketFactory.getChildTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "儿童"));
+                        break buy;
+                    case "老人":
+                        context.setCustomerInfo("OLD", isVIP);
+                        ticketPrice = customerExpression.interpret(context, ticketFactory.getElderTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "老人"));
+                        break buy;
+                    case "退伍军人":
+                        context.setCustomerInfo("VETERAN", isVIP);
+                        ticketPrice = customerExpression.interpret(context, ticketFactory.getAdultTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "成人"));
+                        break buy;
+                    case "残疾人":
+                        context.setCustomerInfo("DISABLED", isVIP);
+                        ticketPrice = customerExpression.interpret(context, ticketFactory.getAdultTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "成人"));
+                        break buy;
+                    default:
+                        System.out.println("输入有误，请重新输入");
+                        isVIP = false;
                 }
             }
-            switch (type) {
-                case "成人":
-                    context.setCustomerInfo("ADULT", isVIP);
-                    ticketPrice = customerExpression.interpret(context, ticketFactory.getAdultTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "成人"));
-                    break buy;
-                case "儿童":
-                    context.setCustomerInfo("CHILD", isVIP);
-                    ticketPrice = customerExpression.interpret(context, ticketFactory.getChildTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "儿童"));
-                    break buy;
-                case "老人":
-                    context.setCustomerInfo("OLD", isVIP);
-                    ticketPrice = customerExpression.interpret(context, ticketFactory.getElderTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "老人"));
-                    break buy;
-                case "退伍军人":
-                    context.setCustomerInfo("VETERAN", isVIP);
-                    ticketPrice = customerExpression.interpret(context, ticketFactory.getAdultTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "成人"));
-                    break buy;
-                case "残疾人":
-                    context.setCustomerInfo("DISABLED", isVIP);
-                    ticketPrice = customerExpression.interpret(context, ticketFactory.getAdultTicket(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), "成人"));
-                    break buy;
-                default:
-                    System.out.println("输入有误，请重新输入");
-                    isVIP = false;
-            }
+
+            scanner.nextLine();
+            System.out.println("门票价格：" + ticketPrice);
         }
-
-        System.out.println("门票价格：" + ticketPrice);
 
         System.out.println("票务管理场景和购票场景演示结束");
         scanner.close();
