@@ -39,7 +39,7 @@ class TicketFactoryTest {
         System.out.println();
 
         System.out.println("---------------------------单例模式测试开始----------------------------");
-        System.out.println("票种从创建状态到已存在状态的切换和对应的行为");
+        System.out.println("创建单例类实例TicketFactory");
         System.out.println("---------------------------------------------------------------------");
 
         TicketFactory ticketFactory = TicketFactory.getTicketFactory();
