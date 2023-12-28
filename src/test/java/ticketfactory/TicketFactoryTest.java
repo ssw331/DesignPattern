@@ -99,15 +99,12 @@ class TicketFactoryTest {
         ticket = new AdultTicket(date);
         Creating creating = new Creating();
         creating.doAction(ticket);
-        ticket.setState(creating);
 
         Existing existing = new Existing();
         existing.doAction(ticket);
-        ticket.setState(existing);
 
         Destroying destroying = new Destroying();
         destroying.doAction(ticket);
-        ticket.setState(destroying);
 
         System.out.println("---------------------------状态模式测试结束----------------------------");
         System.out.println();
