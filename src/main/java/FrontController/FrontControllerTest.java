@@ -1,10 +1,10 @@
 package FrontController;
 
 public class FrontControllerTest {
-    public static void main(String[] args) {
-        frontControllerTest();
-    }
-    public static void frontControllerTest(){
+//    public static void main(String[] args) {
+//        frontControllerTest();
+//    }
+    public void frontControllerTest(){
         FrontController frontController = new FrontController();
         System.out.println("*****************************【前端控制器模式展示】****************************");
         System.out.println("前端控制器模式是用来提供一个集中的请求处理机制，所有的请求都将由一个单一的处理程序处理。");

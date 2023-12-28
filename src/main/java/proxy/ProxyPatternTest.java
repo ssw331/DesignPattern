@@ -14,7 +14,7 @@ import proxy.TicketService;
  */
 public class ProxyPatternTest {
 
-    public static void main(String[] args) {
+    public void ProxyText() {
         System.out.println("启动游乐园**代理模式**演示...\n");
 
         testTicketPurchase(10); // 小于12岁的孩子

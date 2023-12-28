@@ -1,7 +1,7 @@
 package Adapter;
 
 public class testAdapter {
-    public static void main(String[] args) {
+    public void AdapterTest() {
         System.out.println("适配器模式测试：游客游玩过山车前需要系好安全带");
         System.out.println("适配器体现：将attraction接口中定义的前置操作接口转换成易于游客使用的接口prepareAndCheck");
 

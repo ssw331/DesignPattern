@@ -4,9 +4,9 @@
  */
 package DependencyInjection;
 
-public class test {
+public class DependencyInjectionTest {
 
-    public static void main(String[] args) {
+    public void DITest() {
         System.out.println("依赖注入模式测试：游客游游玩某项目后在其票务上进行标记");
         System.out.println("依赖注入体现：musementPark 类依赖于 TicketMarkingService 来为票添加标记。这种依赖关系是通过构造函数注入的");
         // 创建 TicketMarkingService 实例

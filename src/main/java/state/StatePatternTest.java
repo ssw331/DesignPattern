@@ -13,7 +13,7 @@ import state.Visitor;
  */
 public class StatePatternTest {
 
-    public static void main(String[] args) {
+    public void StateTest() {
         System.out.println("启动游乐园**状态模式**演示...\n");
 
         // 创建一个普通游客

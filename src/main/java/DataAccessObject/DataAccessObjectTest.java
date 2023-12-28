@@ -3,10 +3,10 @@ import java.util.List;
 
 public class DataAccessObjectTest {
 
-    public static void main(String[] args) {
-        dataAccessObjectTest();
-    }
-    public static void dataAccessObjectTest(){
+//    public static void main(String[] args) {
+//        dataAccessObjectTest();
+//    }
+    public void dataAccessObjectTest(){
         System.out.println("*****************************【数据访问对象模式展示】****************************");
         System.out.println("# 数据访问对象模式（Data Access Object Pattern）或 DAO 模式用于把低级的数据访问 API 或操作从高级的业务服务中分离出来。");
         System.out.println("# 以下代码展示了如何使用数据访问对象模式来获取数据，实现了对数据的一些操作。");

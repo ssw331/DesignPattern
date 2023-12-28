@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class VisitorPatternTest {
 
-    public static void main(String[] args) {
+    public void VisitorTest() {
         System.out.println("启动游乐园**访问者模式**演示...\n");
 
         List<AmusementFacilityBase> facilities = new ArrayList<>();  // 游乐设施列表

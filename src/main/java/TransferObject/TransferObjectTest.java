@@ -4,10 +4,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class TransferObjectTest {
-    public static void main(String[] args) {
-        transferObjectTest();
-    }
-    public static void transferObjectTest() {
+//    public static void main(String[] args) {
+//        transferObjectTest();
+//    }
+    public void transferObjectTest() {
 
         System.out.println("*****************************【传输对象模式展示】****************************");
         System.out.println("DTO模式在处理方法中携带数据的对象，能够目减少方法调用的次数。");
