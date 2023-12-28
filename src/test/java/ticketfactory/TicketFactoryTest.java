@@ -16,8 +16,6 @@ class TicketFactoryTest {
 
     String date = "20231213";
     Ticket ticket;
-    double price = 100.0;
-    String bonus = "test";
 
     @BeforeEach
     public void beforeEach() {
