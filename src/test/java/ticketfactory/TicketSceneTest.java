@@ -1,15 +1,16 @@
+package ticketfactory;
+
 import Flyweight.Ticket;
 import Singleton.TicketFactory;
 import interpreter.Context;
 import interpreter.CustomerExpression;
-import interpreter.CustomerType;
 import interpreter.Expression;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class TicketScene {
+public class TicketSceneTest {
     private static final TicketFactory ticketFactory = TicketFactory.getTicketFactory();
 
     public static void main(String[] args) {

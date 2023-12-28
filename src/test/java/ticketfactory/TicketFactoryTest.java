@@ -55,9 +55,9 @@ class TicketFactoryTest {
     @Order(2)
     public void testFlyweight() {
         System.out.println("*****************************【享元模式展示】****************************");
-        System.out.println("# 享元模式主要使用的场景为");
-        System.out.println("# ");
-        System.out.println("# ");
+        System.out.println("# 享元模式主要使用的场景为系统需要创建大量可以提取公用部分的对象时避免重复的创建");
+        System.out.println("# 主要实现思路是利用表存储已经创建了的对象，并在业务处理时检查是否已经存在：有则直接返回，无则创建");
+        System.out.println("# 利用哈希表将唯一识别码和对象对应，通过查找哈希表确定是否已经创建");
         System.out.println("**********************************************************************");
         System.out.println();
 
@@ -85,9 +85,9 @@ class TicketFactoryTest {
     @Order(3)
     public void testStates() {
         System.out.println("*****************************【状态模式展示】****************************");
-        System.out.println("# ");
-        System.out.println("# ");
-        System.out.println("# ");
+        System.out.println("# 状态模式的应用场景主要在于一个对象需要根据不同的状态做出不同的行为");
+        System.out.println("# 主要实现思路是根据不同的状态类，将对象作为参数，在不同状态下时对象进行不同的行为");
+        System.out.println("# 利用状态类和状态的行为接口，把票种作为参数传入接口并进行不同的操作");
         System.out.println("**********************************************************************");
         System.out.println();
 
@@ -115,9 +115,9 @@ class TicketFactoryTest {
     @Order(4)
     public void testInterpreter() {
         System.out.println("*****************************【解释器模式展示】****************************");
-        System.out.println("# ");
-        System.out.println("# ");
-        System.out.println("# ");
+        System.out.println("# 解释器模式主要用于对一些特定的语法/文法进行解释，需要上下文和解释逻辑");
+        System.out.println("# 主要思路在于：1.构建上下文类，用于存储被解释的内容；2.定义解释类对上下文的解释逻辑");
+        System.out.println("# 实现中主要对于身份信息、购票类型进行定义，随后编写解释器类对于票价的解释逻辑即可。");
         System.out.println("**********************************************************************");
         System.out.println();
 
