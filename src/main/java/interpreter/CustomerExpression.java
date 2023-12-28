@@ -1,5 +1,7 @@
 package interpreter;
 
+import Flyweight.Ticket;
+
 /*
  * @Author XiaoJunLv
  * @Date 2023/12/19
@@ -15,7 +17,9 @@ public class CustomerExpression implements Expression {
     private double VIPPrice = 80.0;
 
     @Override
-    public double interpret(Context context) {
+    public double interpret(Context context, Ticket ticket) {
+        normalPrice = ticket.getPrice();
+        VIPPrice = normalPrice * 0.8;
         double tempPrice = context.isVIP() ? VIPPrice : normalPrice;
         return tempPrice * context.getCustomerType().getPercent();
     }

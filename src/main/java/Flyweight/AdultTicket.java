@@ -9,6 +9,7 @@ public class AdultTicket implements Ticket {
     private State state;
 
     public AdultTicket(String date) {
+        setPrice(100.0);
         setDate(date);
         setPrice(price);
         createTicket();

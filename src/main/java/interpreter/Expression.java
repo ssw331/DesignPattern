@@ -1,4 +1,7 @@
 package interpreter;
+
+import Flyweight.Ticket;
+
 /*
  * @Author XiaoJunLv
  * @Date 2023/12/19
@@ -7,5 +10,5 @@ package interpreter;
  * 异常类，用于处理顾客身份异常
  */
 public interface Expression {
-    double interpret(Context context);
+    double interpret(Context context, Ticket ticket);
 }

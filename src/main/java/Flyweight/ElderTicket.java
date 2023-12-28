@@ -10,6 +10,7 @@ public class ElderTicket implements Ticket {
     private State state;
 
     public ElderTicket(String date) {
+        setPrice(80.0);
         setDate(date);
         createTicket();
     }

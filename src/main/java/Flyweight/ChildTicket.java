@@ -10,6 +10,7 @@ public class ChildTicket implements Ticket {
     private State state;
 
     public ChildTicket(String date) {
+        setPrice(70.0);
         setDate(date);
         createTicket();
     }

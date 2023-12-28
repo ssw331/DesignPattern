@@ -125,6 +125,7 @@ class TicketFactoryTest {
         System.out.println("输入身份信息和VIP信息，通过解释器模式解释信息并设定票价");
         System.out.println("---------------------------------------------------------------------");
 
+        ticket = new AdultTicket(date);
         Expression customerExpression = new CustomerExpression();
 
         Context context = new Context();
@@ -132,7 +133,7 @@ class TicketFactoryTest {
 
         System.out.println("顾客身份信息为：" + "成人 VIP");
 
-        double ticketPrice = customerExpression.interpret(context);
+        double ticketPrice = customerExpression.interpret(context, ticket);
         System.out.println("门票价格：" + ticketPrice);
 
         System.out.println("---------------------------解释器模式测试结束----------------------------");
