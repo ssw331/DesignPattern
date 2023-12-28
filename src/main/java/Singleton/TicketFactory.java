@@ -49,7 +49,7 @@ public class TicketFactory {
         existing.doAction(ticket);
         System.out.println(ticket.getState());
     }
-    public AdultTicket getAdultTicket(String date, String type) {
+    public Ticket getAdultTicket(String date, String type) {
         AdultTicket adultTicket = (AdultTicket) ticketMap.get(date + type);  // 通过类型和日期映射实例，防止不同类型同日期的实例无法被映射
         if (adultTicket == null) {
             adultTicket = new AdultTicket(date);
@@ -63,7 +63,7 @@ public class TicketFactory {
         return adultTicket;
     }
 
-    public ChildTicket getChildTicket(String date, String type) {
+    public Ticket getChildTicket(String date, String type) {
         ChildTicket childTicket = (ChildTicket) ticketMap.get(date + type);
         if (childTicket == null) {
             childTicket = new ChildTicket(date);
@@ -77,7 +77,7 @@ public class TicketFactory {
         return childTicket;
     }
 
-    public ElderTicket getElderTicket(String date, String type) {
+    public Ticket getElderTicket(String date, String type) {
         ElderTicket elderTicket = (ElderTicket) ticketMap.get(date + type);
         if (elderTicket == null) {
             elderTicket = new ElderTicket(date);

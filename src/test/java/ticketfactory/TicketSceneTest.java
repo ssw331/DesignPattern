@@ -130,7 +130,6 @@ public class TicketSceneTest {
                 }
             }
 
-            scanner.nextLine();
             System.out.println("门票价格：" + ticketPrice);
         }
 
