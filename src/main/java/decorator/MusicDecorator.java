@@ -19,6 +19,6 @@ public class MusicDecorator extends CarDecorator {
     }
 
     private void addMusic() {
-        System.out.println("添加音乐装饰");
+        System.out.println("*已添加音乐装饰*");
     }
 }

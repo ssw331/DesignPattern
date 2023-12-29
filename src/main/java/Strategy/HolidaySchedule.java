@@ -11,7 +11,7 @@ import decorator.LightsDecorator;
 /* *
  * 具体策略类——节假日花车巡游
  */
-class HolidaySchedule implements TimeScheduleStrategy {
+public class HolidaySchedule implements TimeScheduleStrategy {
     @Override
     public void schedule() {
         System.out.println("节假日花车巡游");

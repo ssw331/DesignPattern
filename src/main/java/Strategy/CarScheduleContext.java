@@ -7,7 +7,7 @@ package Strategy;
 /* *
  * 环境类，用于运行花车时间排表
  */
-class CarScheduleContext {
+public class CarScheduleContext {
     private TimeScheduleStrategy timeScheduleStrategy;
 
     public void setTimeScheduleStrategy(TimeScheduleStrategy timeScheduleStrategy) {

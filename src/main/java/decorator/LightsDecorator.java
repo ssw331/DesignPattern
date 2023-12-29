@@ -19,6 +19,6 @@ public class LightsDecorator extends CarDecorator {
     }
 
     private void addLights() {
-        System.out.println("添加灯光装饰");
+        System.out.println("*已添加灯光装饰*");
     }
 }
