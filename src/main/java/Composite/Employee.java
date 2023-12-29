@@ -2,7 +2,7 @@ package Composite;
 import java.util.ArrayList;
 import java.util.List;
 public abstract class Employee {
-    protected String name;
+        protected String name;
     protected String position;
     protected Employee supervisor;
 

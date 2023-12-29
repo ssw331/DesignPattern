@@ -18,7 +18,6 @@ public class QueueLength {
 
     public void notifySubscribers() {
         for (Visitor subscriber : subscribers) {
-
             subscriber.update(this.queueLength);
         }
     }

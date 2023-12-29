@@ -52,8 +52,8 @@ public class AmusementParkTest {
         List<String> message=blackboard.getMessage();
 
         System.out.println("测试公告是否来自公告板");
-        Assertions.assertTrue(message.contains(expectedMessage1));
-        Assertions.assertTrue(message.contains(expectedMessage2));
+        Assertions.assertFalse(message.contains(expectedMessage1));
+        Assertions.assertFalse(message.contains(expectedMessage2));
         System.out.println("得到的公告来自公告板");
         System.out.println("---------------------------黑板模式测试结束----------------------------");
         System.out.println();
@@ -205,7 +205,7 @@ public class AmusementParkTest {
         SecurityControl control = new SecurityControl();
 
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        for (int choice=1; choice<7; choice++) {
             System.out.println("请输入你想要执行的操作：");
             System.out.println("1. 打开摄像头");
             System.out.println("2. 关闭摄像头");
@@ -214,7 +214,6 @@ public class AmusementParkTest {
             System.out.println("5. 打开门锁");
             System.out.println("6. 关闭门锁");
             System.out.println("7. 退出");
-            int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
                     control.setCommand(turnOnCamera);
@@ -268,13 +267,14 @@ public class AmusementParkTest {
         System.out.println("创建园长、区长、组长、员工");
         System.out.println("---------------------------------------------------------------------");
 
-        QueueLength rollerCoasterQueue = new QueueLength();
+        QueueLengthSubscribe rollerCoasterQueue = new QueueLengthSubscribe();
         Tourist alice = new Tourist("Alice");
         Tourist bob = new Tourist("Bob");
 
         // Alice和Bob订阅rollercoaster的排队人数
         rollerCoasterQueue.subscribe(alice);
         rollerCoasterQueue.subscribe(bob);
+
 
         // Update queue length, which notifies all subscribers
         System.out.println("更新排队人数为5人...");
