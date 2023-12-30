@@ -50,8 +50,15 @@ public class AmusementParkVisitTest {
         ISpecification<Visitor> ageSpecification = new VisitorAgeSpecification(12, 18);
         ISpecification<Staff> roleSpecification = new StaffRoleSpecification("Security");
 
-        Assertions.assertTrue(ageSpecification.isSatisfiedBy(youngVisitor));
-        Assertions.assertTrue(roleSpecification.isSatisfiedBy(securityStaff));
+        boolean isYoungVisitorSatisfied = ageSpecification.isSatisfiedBy(youngVisitor);
+        boolean isSecurityStaffSatisfied = roleSpecification.isSatisfiedBy(securityStaff);
+
+        Assertions.assertTrue(isYoungVisitorSatisfied, "年龄规约未能正确验证小明的年龄");
+        Assertions.assertTrue(isSecurityStaffSatisfied, "角色规约未能正确验证王警官的职位");
+
+        // 打印测试结果
+        System.out.println("年龄规约测试结果： " + (isYoungVisitorSatisfied ? "通过" : "未通过"));
+        System.out.println("角色规约测试结果： " + (isSecurityStaffSatisfied ? "通过" : "未通过"));
 
         System.out.println("---------------------------------------------------------------------\n");
     }
