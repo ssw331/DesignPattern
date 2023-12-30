@@ -1,4 +1,4 @@
-package interpreter;
+package ticket.interpreter;
 /*
  * @Author XiaoJunLv
  * @Date 2023/12/19

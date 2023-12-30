@@ -1,10 +1,10 @@
-package ticketfactory;
+package ticket;
 
-import Flyweight.Ticket;
-import Singleton.TicketFactory;
-import interpreter.Context;
-import interpreter.CustomerExpression;
-import interpreter.Expression;
+import ticket.flyweight.Ticket;
+import ticket.singleton.TicketFactory;
+import ticket.interpreter.Context;
+import ticket.interpreter.CustomerExpression;
+import ticket.interpreter.Expression;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

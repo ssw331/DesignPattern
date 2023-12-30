@@ -1,6 +1,6 @@
-package Flyweight;
+package ticket.flyweight;
 
-import State.State;
+import ticket.state.State;
 
 public interface Ticket {
     void createTicket();  // 创建票种的信息提示

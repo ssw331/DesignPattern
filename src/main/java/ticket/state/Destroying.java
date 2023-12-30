@@ -1,6 +1,6 @@
-package State;
+package ticket.state;
 
-import Flyweight.Ticket;
+import ticket.flyweight.Ticket;
 
 public class Destroying implements State{
     @Override

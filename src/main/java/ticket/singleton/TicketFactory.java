@@ -1,12 +1,12 @@
-package Singleton;
+package ticket.singleton;
 
-import Flyweight.AdultTicket;
-import Flyweight.ChildTicket;
-import Flyweight.ElderTicket;
-import Flyweight.Ticket;
-import State.Creating;
-import State.Destroying;
-import State.Existing;
+import ticket.flyweight.AdultTicket;
+import ticket.flyweight.ChildTicket;
+import ticket.flyweight.ElderTicket;
+import ticket.flyweight.Ticket;
+import ticket.state.Creating;
+import ticket.state.Destroying;
+import ticket.state.Existing;
 
 import java.util.HashMap;
 

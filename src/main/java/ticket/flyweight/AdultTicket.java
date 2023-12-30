@@ -1,6 +1,6 @@
-package Flyweight;
+package ticket.flyweight;
 
-import State.State;
+import ticket.state.State;
 
 public class AdultTicket implements Ticket {
     private String date;  // 入园时间

@@ -1,14 +1,14 @@
-package ticketfactory;
+package ticket;
 
-import Flyweight.AdultTicket;
-import Flyweight.Ticket;
-import Singleton.TicketFactory;
-import State.Creating;
-import State.Destroying;
-import State.Existing;
-import interpreter.Context;
-import interpreter.CustomerExpression;
-import interpreter.Expression;
+import ticket.flyweight.AdultTicket;
+import ticket.flyweight.Ticket;
+import ticket.singleton.TicketFactory;
+import ticket.state.Creating;
+import ticket.state.Destroying;
+import ticket.state.Existing;
+import ticket.interpreter.Context;
+import ticket.interpreter.CustomerExpression;
+import ticket.interpreter.Expression;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

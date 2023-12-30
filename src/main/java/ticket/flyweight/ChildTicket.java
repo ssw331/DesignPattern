@@ -1,29 +1,20 @@
-package Flyweight;
+package ticket.flyweight;
 
-import State.State;
+import ticket.state.State;
 
-public class ElderTicket implements Ticket {
+public class ChildTicket implements Ticket {
 
     private String date;  // 入园时间
     private double price;
     private String bonus;
     private State state;
 
-    public ElderTicket(String date) {
-        setPrice(80.0);
+    public ChildTicket(String date) {
+        setPrice(70.0);
         setDate(date);
         createTicket();
     }
 
-    @Override
-    public State getState() {
-        return state;
-    }
-
-    @Override
-    public void setState(State state) {
-        this.state = state;
-    }
     @Override
     public String getDate() {
         return date;
@@ -56,11 +47,21 @@ public class ElderTicket implements Ticket {
 
     @Override
     public void createTicket() {
-        System.out.println("票务创建了" + date + "的老人票");
+        System.out.println("票务创建了" + date + "的儿童票");
     }
 
     @Override
     public String getType() {
-        return "Elder";
+        return "Child";
+    }
+
+    @Override
+    public State getState() {
+        return state;
+    }
+
+    @Override
+    public void setState(State state) {
+        this.state = state;
     }
 }

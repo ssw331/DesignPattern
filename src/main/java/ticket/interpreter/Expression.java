@@ -1,6 +1,6 @@
-package interpreter;
+package ticket.interpreter;
 
-import Flyweight.Ticket;
+import ticket.flyweight.Ticket;
 
 /*
  * @Author XiaoJunLv
