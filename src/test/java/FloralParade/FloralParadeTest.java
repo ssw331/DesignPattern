@@ -1,12 +1,12 @@
 package FloralParade;
 
-import Strategy.CarScheduleContext;
-import Strategy.HolidaySchedule;
-import Strategy.SpecialEventSchedule;
-import decorator.Car;
-import decorator.FlowerCar;
-import decorator.LightsDecorator;
-import decorator.MusicDecorator;
+import floralParade.Strategy.CarScheduleContext;
+import floralParade.Strategy.HolidaySchedule;
+import floralParade.Strategy.SpecialEventSchedule;
+import floralParade.decorator.Car;
+import floralParade.decorator.FlowerCar;
+import floralParade.decorator.LightsDecorator;
+import floralParade.decorator.MusicDecorator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

@@ -1,8 +1,8 @@
 package FloralParade;
 
-import Strategy.CarScheduleContext;
-import Strategy.HolidaySchedule;
-import Strategy.SpecialEventSchedule;
+import floralParade.Strategy.CarScheduleContext;
+import floralParade.Strategy.HolidaySchedule;
+import floralParade.Strategy.SpecialEventSchedule;
 
 import java.util.Scanner;
 

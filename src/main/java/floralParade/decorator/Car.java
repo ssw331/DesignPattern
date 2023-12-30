@@ -1,4 +1,4 @@
-package decorator;
+package floralParade.decorator;
 
 /*
  * @Author XiaoJunLv

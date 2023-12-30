@@ -1,4 +1,4 @@
-package Strategy;
+package floralParade.Strategy;
 
 /*
  * @Author XiaoJunLv

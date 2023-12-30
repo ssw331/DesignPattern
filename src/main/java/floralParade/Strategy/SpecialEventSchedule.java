@@ -1,8 +1,8 @@
-package Strategy;
+package floralParade.Strategy;
 
-import decorator.Car;
-import decorator.FlowerCar;
-import decorator.MusicDecorator;
+import floralParade.decorator.Car;
+import floralParade.decorator.FlowerCar;
+import floralParade.decorator.MusicDecorator;
 
 /*
  * @Author XiaoJunLv
