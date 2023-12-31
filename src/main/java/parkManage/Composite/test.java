@@ -1,4 +1,4 @@
-package Composite;
+package parkManage.Composite;
 
 public class test {
     public static void main(String[] args) {

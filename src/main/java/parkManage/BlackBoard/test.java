@@ -1,4 +1,4 @@
-package BlackBoard;
+package parkManage.BlackBoard;
 
 public class test {
     public static void main(String[] args) {

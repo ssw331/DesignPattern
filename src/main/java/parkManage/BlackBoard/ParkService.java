@@ -1,4 +1,4 @@
-package BlackBoard;
+package parkManage.BlackBoard;
 
 public class ParkService {
     private final Blackboard blackboard;

@@ -1,6 +1,5 @@
-package Composite;
-import java.util.ArrayList;
-import java.util.List;
+package parkManage.Composite;
+
 public abstract class Employee {
         protected String name;
     protected String position;

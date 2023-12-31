@@ -1,4 +1,4 @@
-package BlackBoard;
+package parkManage.BlackBoard;
 
 import java.util.ArrayList;
 import java.util.List;

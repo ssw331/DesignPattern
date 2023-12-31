@@ -1,4 +1,4 @@
-package PublishSubscrib;
+package parkManage.PublishSubscrib;
 
 public class Tourist implements Visitor{
     private final String name;

@@ -1,4 +1,4 @@
-package Composite;
+package parkManage.Composite;
 
 // 普通员工，没有下属
 public class Staff extends Employee{
