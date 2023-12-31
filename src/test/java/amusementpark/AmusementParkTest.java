@@ -120,7 +120,7 @@ public class AmusementParkTest {
         System.out.println("**********************************************************************");
         System.out.println();
 
-        System.out.println("---------------------------组合模式测试开始----------------------------");
+        System.out.println("---------------------------委托模式测试开始----------------------------");
         System.out.println("创建日常任务");
         System.out.println("---------------------------------------------------------------------");
 
@@ -132,7 +132,7 @@ public class AmusementParkTest {
         Task dailyTask = new DailyManagementTask();
         director.delegateTask(dailyTask,manager);
 
-        System.out.println("---------------------------组合模式测试结束----------------------------");
+        System.out.println("---------------------------委托模式测试结束----------------------------");
         System.out.println();
     }
 
