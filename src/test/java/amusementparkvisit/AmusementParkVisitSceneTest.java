@@ -1,4 +1,4 @@
-package amusementparkvisit.test;
+package amusementparkvisit;
 
 import amusementparkvisit.mediator.QueueMediator;
 import amusementparkvisit.mediator.Ride;

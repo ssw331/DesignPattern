@@ -3,7 +3,7 @@ import TourBusStationSubSystem.Bus;
 import TourBusStationSubSystem.TourBusStationSceneAdminTest;
 import TourBusStationSubSystem.TourBusStationSceneTouristTest;
 import TourBusStationSubSystem.prototype.BusCache;
-import amusementpark.AmusementParkTest;
+import amusementparkvisit.AmusementParkVisitSceneTest;
 import miscellaneous.MiscellaneousScene;
 import ticket.TicketSceneTest;
 
@@ -43,7 +43,7 @@ public class AllScene {
                     TourBusStationSceneAdminTest.main(args);
                     TourBusStationSceneTouristTest.main(args);
                 }
-//                case '4' -> ;
+                case '4' -> AmusementParkVisitSceneTest.main(args);
 //                case '5' -> ;
 //                case '6' -> ;
                 case '7' -> MiscellaneousScene.main(args);
