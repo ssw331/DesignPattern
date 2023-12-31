@@ -18,7 +18,6 @@ import java.util.List;
 public class RestaurantTest {
     private static final Menu menu = new Menu();
 
-    @BeforeEach
     public void beforeEach() {
         System.out.println();
         System.out.println("*****************************【餐厅子系统】****************************");
@@ -28,8 +27,6 @@ public class RestaurantTest {
     /**
      * 测试抽象工厂模式
      */
-    @Test
-    @Order(1)
     public void testAbstractFactory() {
         System.out.println("*****************************【抽象工厂模式展示】****************************");
         System.out.println("# 抽象工厂模式是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。");
@@ -55,8 +52,6 @@ public class RestaurantTest {
     /**
      * 测试工厂模式
      */
-    @Test
-    @Order(2)
     public void testFactory() {
         System.out.println("*****************************【工厂模式展示】****************************");
         System.out.println("# 工厂模式属于创建型模式，它提供了一种创建对象的最佳方式。");
@@ -118,8 +113,6 @@ public class RestaurantTest {
         System.out.println();
     }
 
-    @Test
-    @Order(3)
     public void testBuilder() {
         System.out.println("*****************************【建造者模式展示】****************************");
         System.out.println("# 建造者模式使用多个简单的对象一步一步构建成一个复杂的对象。");
@@ -161,8 +154,6 @@ public class RestaurantTest {
         System.out.println();
     }
 
-    @Test
-    @Order(4)
     public void testIterator(){
         System.out.println("*****************************【迭代器模式展示】****************************");
         System.out.println("# 建造者模式使用多个简单的对象一步一步构建成一个复杂的对象。");
@@ -188,5 +179,13 @@ public class RestaurantTest {
 
         System.out.println("---------------------------迭代器模式测试结束----------------------------");
         System.out.println();
+    }
+
+    public void run() {
+        beforeEach();
+        testAbstractFactory();
+        testFactory();
+        testBuilder();
+        testIterator();
     }
 }
