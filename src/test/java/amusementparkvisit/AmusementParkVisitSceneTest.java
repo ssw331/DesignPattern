@@ -55,6 +55,5 @@ public class AmusementParkVisitSceneTest {
         System.out.println("游乐园参观模块场景测试结束");
         System.out.println("---------------------------------------------------------------------");
 
-        scanner.close();
     }
 }

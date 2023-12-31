@@ -134,6 +134,5 @@ public class TicketSceneTest {
         }
 
         System.out.println("票务管理场景和购票场景演示结束");
-        scanner.close();
     }
 }

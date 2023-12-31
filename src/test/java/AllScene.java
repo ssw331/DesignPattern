@@ -37,8 +37,12 @@ public class AllScene {
                 choice = scanner.nextLine();
             }
             switch (choice.charAt(0)) {
-                case '1' -> TicketSceneTest.main(args);
-                case '2' -> FloralParadeScene.main(args);
+                case '1' -> {
+                    TicketSceneTest.main(args);
+                }
+                case '2' -> {
+                    FloralParadeScene.main(args);
+                }
                 case '3' -> {
                     TourBusStationSceneAdminTest.main(args);
                     TourBusStationSceneTouristTest.main(args);
