@@ -1,4 +1,4 @@
-package FrontController;
+package miscellaneous.FrontController;
 
 //管理员界面
 public class ManagerView {

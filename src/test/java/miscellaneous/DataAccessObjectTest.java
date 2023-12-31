@@ -1,4 +1,7 @@
-package DataAccessObject;
+package miscellaneous;
+import miscellaneous.DataAccessObject.Employee;
+import miscellaneous.DataAccessObject.EmployeeDaoImpl;
+
 import java.util.List;
 
 public class DataAccessObjectTest {

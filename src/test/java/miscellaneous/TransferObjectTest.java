@@ -1,6 +1,8 @@
-package TransferObject;
+package miscellaneous;
 
-import java.util.Iterator;
+import miscellaneous.TransferObject.GoodsBusinessObject;
+import miscellaneous.TransferObject.GoodsTransferObject;
+
 import java.util.Map;
 
 public class TransferObjectTest {

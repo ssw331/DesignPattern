@@ -1,4 +1,4 @@
-package TransferObject;
+package miscellaneous.TransferObject;
 
 import java.util.HashMap;
 import java.util.Map;

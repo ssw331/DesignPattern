@@ -1,4 +1,6 @@
-package FrontController;
+package miscellaneous;
+
+import miscellaneous.FrontController.FrontController;
 
 public class FrontControllerTest {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package FrontController;
+package miscellaneous.FrontController;
 
 
 //调度器，负责分发相应的页面

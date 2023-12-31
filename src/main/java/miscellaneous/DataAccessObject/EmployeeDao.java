@@ -1,4 +1,4 @@
-package DataAccessObject;
+package miscellaneous.DataAccessObject;
 
 import java.util.List;
 

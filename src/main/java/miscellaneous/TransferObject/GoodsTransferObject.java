@@ -1,4 +1,4 @@
-package TransferObject;
+package miscellaneous.TransferObject;
 
 //传输对象实体
 public class GoodsTransferObject {

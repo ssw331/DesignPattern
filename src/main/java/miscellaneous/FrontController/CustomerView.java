@@ -1,4 +1,4 @@
-package FrontController;
+package miscellaneous.FrontController;
 
 //游客界面
 public class CustomerView {

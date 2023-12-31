@@ -1,4 +1,4 @@
-package FrontController;
+package miscellaneous.FrontController;
 
 //前端控制器
 public class FrontController {
