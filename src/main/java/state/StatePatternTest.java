@@ -14,7 +14,12 @@ import state.Visitor;
 public class StatePatternTest {
 
     public void StateTest() {
-        System.out.println("启动游乐园**状态模式**演示...\n");
+        System.out.println("*****************************【状态模式展示】****************************");
+        System.out.println("状态模式是一种行为型设计模式，它允许对象在内部状态发生改变时改变它的行为，");
+        System.out.println("一个拥有状态的context对象，在不同状态下，其行为会发生改变");
+        System.out.println("************************************************************************");
+        System.out.println("下面来展示入园权限判定中状态模式的使用。");
+        System.out.println("----------------------State Pattern Test Start--------------------");
 
         // 创建一个普通游客
         Visitor visitor = new Visitor(new RegularVisitorState());
@@ -31,6 +36,7 @@ public class StatePatternTest {
         visitor.enterPark();
         visitor.accessAttraction();
         visitor.exitPark();
+        System.out.println("--------------------State Pattern Test End-------------------");
     }
 
 }

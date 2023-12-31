@@ -15,7 +15,12 @@ import java.util.List;
 public class VisitorPatternTest {
 
     public void VisitorTest() {
-        System.out.println("启动游乐园**访问者模式**演示...\n");
+        System.out.println("*****************************【访问者模式展示】****************************");
+        System.out.println("访问者模式，即在不改变聚合对象内元素的前提下，为聚合对象内每个元素提供多种访问方式。");
+        System.out.println("访问者模式主要解决稳定的数据结构和易变元素的操作之间的耦合问题。");
+        System.out.println("************************************************************************");
+        System.out.println("下面来展示游乐设施访问中访问者模式的使用。");
+        System.out.println("----------------------Visitor Pattern Test Start--------------------");
 
         List<AmusementFacilityBase> facilities = new ArrayList<>();  // 游乐设施列表
 
@@ -55,6 +60,7 @@ public class VisitorPatternTest {
         System.out.println();
 
         System.out.println("工作人员维护完成。\n\n访问者模式演示结束。");
+        System.out.println("--------------------Visitor Pattern Test End-------------------");
     }
 
 }

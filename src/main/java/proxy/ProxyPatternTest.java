@@ -15,10 +15,16 @@ import proxy.TicketService;
 public class ProxyPatternTest {
 
     public void ProxyText() {
-        System.out.println("启动游乐园**代理模式**演示...\n");
+        System.out.println("*****************************【代理模式展示】****************************");
+        System.out.println("代理模式使代理对象具备真实对象的功能，并代替真实对象完成相应操作，");
+        System.out.println("并能够在操作执行的前后，对操作进行增强处理。");
+        System.out.println("************************************************************************");
+        System.out.println("下面来展示购票系统中代理模式的使用。");
+        System.out.println("----------------------Proxy Pattern Test Start--------------------");
 
         testTicketPurchase(10); // 小于12岁的孩子
         testTicketPurchase(14); // 大于或等于12岁的孩子
+        System.out.println("--------------------Proxy Pattern Test End-------------------");
     }
 
     private static void testTicketPurchase(int age) {

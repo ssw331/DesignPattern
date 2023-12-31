@@ -7,7 +7,13 @@ package DependencyInjection;
 public class DependencyInjectionTest {
 
     public void DITest() {
-        System.out.println("依赖注入模式测试：游客游游玩某项目后在其票务上进行标记");
+        System.out.println("*****************************【依赖注入模式展示】****************************");
+        System.out.println("依赖注入（Dependency Injection）模式是一种面向对象编程中的设计模式，");
+        System.out.println("它的目的是将一个对象所依赖的其他对象的创建过程，从该对象本身中分离出来，以便更好地实现解耦和可测试性。");
+        System.out.println("************************************************************************");
+        System.out.println("下面来展示游玩项目标记中依赖注入模式的使用。");
+        System.out.println("----------------------Dependency Injection Test Start--------------------");
+        System.out.println("依赖注入模式测试：游客游玩某项目后在其票务上进行标记");
         System.out.println("依赖注入体现：musementPark 类依赖于 TicketMarkingService 来为票添加标记。这种依赖关系是通过构造函数注入的");
         // 创建 TicketMarkingService 实例
         TicketMarkingService ticketMarkingService = new TicketMarkingService();
@@ -28,5 +34,6 @@ public class DependencyInjectionTest {
         } else {
             System.out.println("票上未该游乐设施进行标记.");
         }
+        System.out.println("----------------------Dependency Injection Test End--------------------");
     }
 }
