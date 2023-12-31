@@ -1,4 +1,4 @@
-package DependencyInjection;
+package miscellaneous.DependencyInjection;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package DependencyInjection;
+package miscellaneous.DependencyInjection;
 
 public class Attraction {
     private String name;

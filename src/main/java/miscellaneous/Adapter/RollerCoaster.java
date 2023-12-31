@@ -1,4 +1,4 @@
-package Adapter;
+package miscellaneous.Adapter;
 
 public class RollerCoaster implements Attraction{
     private boolean safetyBeltFastened=false;

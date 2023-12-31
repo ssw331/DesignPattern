@@ -1,4 +1,4 @@
-package proxy;
+package miscellaneous.proxy;
 
 /**
  * @program:DesignPattern

@@ -1,8 +1,6 @@
 import FloralParade.FloralParadeScene;
-import TourBusStationSubSystem.Bus;
 import TourBusStationSubSystem.TourBusStationSceneAdminTest;
 import TourBusStationSubSystem.TourBusStationSceneTouristTest;
-import TourBusStationSubSystem.prototype.BusCache;
 import amusementparkvisit.AmusementParkVisitSceneTest;
 import miscellaneous.MiscellaneousScene;
 import ticket.TicketSceneTest;
@@ -15,16 +13,16 @@ public class AllScene {
 
         System.out.println(
                 """
-                欢迎来到游乐园，以下是场景测试菜单
-                1.票务系统
-                2.花车巡游
-                3.观光车
-                4.园区参观
-                5.餐厅
-                6.园区管理
-                7.其他
-                0.退出
-                """
+                        欢迎来到游乐园，以下是场景测试菜单
+                        1.票务系统
+                        2.花车巡游
+                        3.观光车
+                        4.园区参观
+                        5.餐厅
+                        6.园区管理
+                        7.其他
+                        0.退出
+                        """
         );
 
         String choice;
@@ -37,12 +35,8 @@ public class AllScene {
                 choice = scanner.nextLine();
             }
             switch (choice.charAt(0)) {
-                case '1' -> {
-                    TicketSceneTest.main(args);
-                }
-                case '2' -> {
-                    FloralParadeScene.main(args);
-                }
+                case '1' -> TicketSceneTest.main(args);
+                case '2' -> FloralParadeScene.main(args);
                 case '3' -> {
                     TourBusStationSceneAdminTest.main(args);
                     TourBusStationSceneTouristTest.main(args);

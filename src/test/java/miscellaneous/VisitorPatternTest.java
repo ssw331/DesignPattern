@@ -1,6 +1,6 @@
-package visitor;
+package miscellaneous;
 
-import visitor.*;
+import miscellaneous.visitor.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class VisitorPatternTest {
         System.out.println("访问者模式主要解决稳定的数据结构和易变元素的操作之间的耦合问题。");
         System.out.println("************************************************************************");
         System.out.println("下面来展示游乐设施访问中访问者模式的使用。");
-        System.out.println("----------------------Visitor Pattern Test Start--------------------");
+        System.out.println("----------------------Visitor Pattern miscellaneous.Test Start--------------------");
 
         List<AmusementFacilityBase> facilities = new ArrayList<>();  // 游乐设施列表
 
@@ -60,7 +60,7 @@ public class VisitorPatternTest {
         System.out.println();
 
         System.out.println("工作人员维护完成。\n\n访问者模式演示结束。");
-        System.out.println("--------------------Visitor Pattern Test End-------------------");
+        System.out.println("--------------------Visitor Pattern miscellaneous.Test End-------------------");
     }
 
 }

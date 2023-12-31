@@ -1,4 +1,4 @@
-package state;
+package miscellaneous.state;
 
 /**
  * @program:DesignPattern

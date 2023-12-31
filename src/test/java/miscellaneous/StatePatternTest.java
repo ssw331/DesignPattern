@@ -1,8 +1,8 @@
-package state;
+package miscellaneous;
 
-import state.RegularVisitorState;
-import state.VIPVisitorState;
-import state.Visitor;
+import miscellaneous.state.RegularVisitorState;
+import miscellaneous.state.VIPVisitorState;
+import miscellaneous.state.Visitor;
 
 /**
  * @program:DesignPattern
@@ -19,7 +19,7 @@ public class StatePatternTest {
         System.out.println("一个拥有状态的context对象，在不同状态下，其行为会发生改变");
         System.out.println("************************************************************************");
         System.out.println("下面来展示入园权限判定中状态模式的使用。");
-        System.out.println("----------------------State Pattern Test Start--------------------");
+        System.out.println("----------------------State Pattern miscellaneous.Test Start--------------------");
 
         // 创建一个普通游客
         Visitor visitor = new Visitor(new RegularVisitorState());
@@ -36,7 +36,7 @@ public class StatePatternTest {
         visitor.enterPark();
         visitor.accessAttraction();
         visitor.exitPark();
-        System.out.println("--------------------State Pattern Test End-------------------");
+        System.out.println("--------------------State Pattern miscellaneous.Test End-------------------");
     }
 
 }

@@ -15,7 +15,7 @@ public class DataAccessObjectTest {
         System.out.println("# 以下代码展示了如何使用数据访问对象模式来获取数据，实现了对数据的一些操作。");
         System.out.println("************************************************************************");
         System.out.println("下面通过展示数据访问对象模式的使用来展示实际业务中数据访问对象模式的使用。");
-        System.out.println("----------------------Data Access Object Pattern Test Start--------------------");
+        System.out.println("----------------------Data Access Object Pattern miscellaneous.Test Start--------------------");
         EmployeeDaoImpl employeeDao = new EmployeeDaoImpl();
         int cielId = employeeDao.addEmployee("Ciel", "男",8000);
         employeeDao.addEmployee("Alice","女",10000);
@@ -30,6 +30,6 @@ public class DataAccessObjectTest {
         }
         employeeDao.updateSalary(cielId, 12000);
         employeeDao.deleteEmployee(cielId);
-        System.out.println("----------------------Data Access Object Pattern Test End--------------------");
+        System.out.println("----------------------Data Access Object Pattern miscellaneous.Test End--------------------");
     }
 }

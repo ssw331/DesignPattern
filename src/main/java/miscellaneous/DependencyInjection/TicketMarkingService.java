@@ -1,4 +1,4 @@
-package DependencyInjection;
+package miscellaneous.DependencyInjection;
 
 /*模拟游乐设施前的票务，用于对票做标记*/
 public class TicketMarkingService {

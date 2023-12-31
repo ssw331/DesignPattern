@@ -1,5 +1,5 @@
 
-package DependencyInjection;
+package miscellaneous.DependencyInjection;
 
 /*AmusementPark 类依赖于 TicketMarkingService 来为票添加标记。这种依赖关系是通过构造函数注入的*/
 public class AmusementPark {

@@ -15,12 +15,12 @@ public class FrontControllerTest {
         System.out.println("只有当身份和请求的界面类型匹配时可以访问对应界面。");
         System.out.println("************************************************************************");
         System.out.println("下面来展示实际业务中前端控制器模式的使用。");
-        System.out.println("----------------------FrontController Pattern Test Start--------------------");
+        System.out.println("----------------------FrontController Pattern miscellaneous.Test Start--------------------");
         frontController.dispatchRequest("游客","游客");
         frontController.dispatchRequest("管理员","管理员");
         frontController.dispatchRequest("管理员","游客");//游客不能访问管理员界面
         frontController.dispatchRequest("unknown","管理员");
         frontController.dispatchRequest("游客","其他人员");
-        System.out.println("----------------------FrontController Pattern Test End--------------------");
+        System.out.println("----------------------FrontController Pattern miscellaneous.Test End--------------------");
     }
 }

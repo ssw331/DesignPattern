@@ -1,9 +1,9 @@
-package proxy;
+package miscellaneous;
 
 
-import proxy.ChildTicketService;
-import proxy.GuardianProxy;
-import proxy.TicketService;
+import miscellaneous.proxy.ChildTicketService;
+import miscellaneous.proxy.GuardianProxy;
+import miscellaneous.proxy.TicketService;
 
 /**
  * @program:DesignPattern
@@ -20,11 +20,11 @@ public class ProxyPatternTest {
         System.out.println("并能够在操作执行的前后，对操作进行增强处理。");
         System.out.println("************************************************************************");
         System.out.println("下面来展示购票系统中代理模式的使用。");
-        System.out.println("----------------------Proxy Pattern Test Start--------------------");
+        System.out.println("----------------------Proxy Pattern miscellaneous.Test Start--------------------");
 
         testTicketPurchase(10); // 小于12岁的孩子
         testTicketPurchase(14); // 大于或等于12岁的孩子
-        System.out.println("--------------------Proxy Pattern Test End-------------------");
+        System.out.println("--------------------Proxy Pattern miscellaneous.Test End-------------------");
     }
 
     private static void testTicketPurchase(int age) {

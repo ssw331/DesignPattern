@@ -13,7 +13,7 @@ public class TransferObjectTest {
 
         System.out.println("*****************************【传输对象模式展示】****************************");
         System.out.println("DTO模式在处理方法中携带数据的对象，能够目减少方法调用的次数。");
-        System.out.println("----------------------Transfer Object Pattern Test Start--------------------");
+        System.out.println("----------------------Transfer Object Pattern miscellaneous.Test Start--------------------");
         GoodsBusinessObject goodBusinessObject = new GoodsBusinessObject();
         GoodsTransferObject good1 = new GoodsTransferObject(1, "iPhone 15", 1);
         GoodsTransferObject good2 = new GoodsTransferObject(10, "PS5 Pro", 2);
@@ -30,6 +30,6 @@ public class TransferObjectTest {
         GoodsTransferObject getGood = goodBusinessObject.getGood(13);
         System.out.println("查看单个货物：");
         System.out.println("id：" + getGood.getId()+" 货物名：" + getGood.getName()+" 数量："+getGood.getCount());
-        System.out.println("----------------------Transfer Object Pattern Test End--------------------");
+        System.out.println("----------------------Transfer Object Pattern miscellaneous.Test End--------------------");
     }
 }
