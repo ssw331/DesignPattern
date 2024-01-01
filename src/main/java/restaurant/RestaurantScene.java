@@ -2,7 +2,7 @@ package restaurant;
 
 public class RestaurantScene {
     public static void main(String[] args) {
-        RestaurantTest restaurantTest = new RestaurantTest();
+        RestaurantForScene restaurantTest = new RestaurantForScene();
         restaurantTest.beforeEach();
         restaurantTest.testAbstractFactory();
         restaurantTest.testFactory();

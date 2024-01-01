@@ -1,4 +1,4 @@
-import FloralParade.FloralParadeScene;
+import floralParade.FloralParadeScene;
 import TourBusStationSubSystem.TourBusStationSceneAdminTest;
 import TourBusStationSubSystem.TourBusStationSceneTouristTest;
 import amusementpark.AmusementParkSceneTest;

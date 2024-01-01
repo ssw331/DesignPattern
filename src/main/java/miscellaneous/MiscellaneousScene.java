@@ -1,5 +1,7 @@
 package miscellaneous;
 
+import miscellaneous.forScene.*;
+
 import java.util.Scanner;
 public class MiscellaneousScene {
     public static void main(String[] args) {
