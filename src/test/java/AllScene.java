@@ -5,7 +5,6 @@ import amusementpark.AmusementParkSceneTest;
 import amusementparkvisit.AmusementParkVisitSceneTest;
 import miscellaneous.MiscellaneousScene;
 import restaurant.RestaurantScene;
-import restaurant.RestaurantTest;
 import ticket.TicketSceneTest;
 
 import java.util.Scanner;
