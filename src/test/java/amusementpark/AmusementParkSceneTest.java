@@ -1,8 +1,4 @@
 package amusementpark;
-import Composite.AreaManager;
-import Composite.ParkManager;
-import Composite.Staff;
-import Composite.TeamLeader;
 
 import amusementpark.blackboard.BlackBoard;
 import amusementpark.security.*;
@@ -66,8 +62,7 @@ public class AmusementParkSceneTest {
                     // 创建一个命令的调用者
                     SecurityControl control = new SecurityControl();
 
-                    Scanner scanner2 = new Scanner(System.in);
-                    for (int choice2 = 1; choice2 < 7; choice2++) {
+                    for (int choice2 = 1; choice2 <= 7; choice2++) {
                         System.out.println("请输入你想要执行的操作：");
                         System.out.println("1. 打开摄像头");
                         System.out.println("2. 关闭摄像头");
