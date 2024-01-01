@@ -1,6 +1,7 @@
 import FloralParade.FloralParadeScene;
 import TourBusStationSubSystem.TourBusStationSceneAdminTest;
 import TourBusStationSubSystem.TourBusStationSceneTouristTest;
+import amusementpark.AmusementParkSceneTest;
 import amusementparkvisit.AmusementParkVisitSceneTest;
 import miscellaneous.MiscellaneousScene;
 import restaurant.RestaurantScene;
@@ -45,7 +46,7 @@ public class AllScene {
                 }
                 case '4' -> AmusementParkVisitSceneTest.main(args);
                 case '5' -> RestaurantScene.main(args);
-//                case '6' -> ;
+                case '6' -> AmusementParkSceneTest.main(args);
                 case '7' -> MiscellaneousScene.main(args);
                 case '0' -> {
                     System.out.println("----------------------演示结束----------------------");
