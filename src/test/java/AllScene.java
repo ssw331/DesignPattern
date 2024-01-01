@@ -3,6 +3,7 @@ import TourBusStationSubSystem.TourBusStationSceneAdminTest;
 import TourBusStationSubSystem.TourBusStationSceneTouristTest;
 import amusementparkvisit.AmusementParkVisitSceneTest;
 import miscellaneous.MiscellaneousScene;
+import restaurant.RestaurantScene;
 import restaurant.RestaurantTest;
 import ticket.TicketSceneTest;
 
@@ -43,7 +44,7 @@ public class AllScene {
                     TourBusStationSceneTouristTest.main(args);
                 }
                 case '4' -> AmusementParkVisitSceneTest.main(args);
-                case '5' -> new RestaurantTest().run();
+                case '5' -> RestaurantScene.main(args);
 //                case '6' -> ;
                 case '7' -> MiscellaneousScene.main(args);
                 case '0' -> {
