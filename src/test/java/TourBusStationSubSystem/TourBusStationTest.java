@@ -30,7 +30,7 @@ public class TourBusStationTest {
     @BeforeEach
     public void beforeEach() {
         System.out.println();
-        System.out.println("*****************************【观光车站子系统】****************************");
+        System.out.println("*****************************【观光小火车站子系统】****************************");
         System.out.println();
     }
 
@@ -46,24 +46,24 @@ public class TourBusStationTest {
         System.out.println("# 通过桥接模式，车辆类型和颜色可以独立变化，增加了系统的灵活性。");
         System.out.println("**********************************************************************");
         System.out.println("---------------------------桥接模式测试开始----------------------------");
-        System.out.println("创建不同颜色和大小的观光车实例：");
+        System.out.println("创建不同颜色和大小的观光小火车实例：");
         System.out.println("---------------------------------------------------------------------");
 
-        // 创建小型黄色观光车
+        // 创建小型黄色观光小火车
         TourBus smallYellowBus = new SmallTourBus(new Yellow());
-        System.out.println("创建了一辆小型黄色观光车：");
+        System.out.println("创建了一辆小型黄色观光小火车：");
         smallYellowBus.desc();
         System.out.println("---------------------------------------------------------------------");
 
-        // 创建大型粉色观光车
+        // 创建大型粉色观光小火车
         TourBus largePinkBus = new LargeTourBus(new Pink());
-        System.out.println("创建了一辆大型粉色观光车：");
+        System.out.println("创建了一辆大型粉色观光小火车：");
         largePinkBus.desc();
         System.out.println("---------------------------------------------------------------------");
 
-        // 创建中型蓝色观光车
+        // 创建中型蓝色观光小火车
         TourBus mediumBlueBus = new MediumTourBus(new Blue());
-        System.out.println("创建了一辆中型蓝色观光车：");
+        System.out.println("创建了一辆中型蓝色观光小火车：");
         mediumBlueBus.desc();
 
         System.out.println("---------------------------桥接模式测试结束----------------------------");
@@ -78,19 +78,19 @@ public class TourBusStationTest {
     public void testDecorator() {
         System.out.println("*****************************【装饰器模式展示】****************************");
         System.out.println("# 装饰器模式允许动态地给对象添加额外的职责，增加功能比生成子类更灵活。");
-        System.out.println("# 在本系统中，可以通过装饰器模式为观光车添加讲解员，增强游客体验。");
+        System.out.println("# 在本系统中，可以通过装饰器模式为观光小火车添加讲解员，增强游客体验。");
         System.out.println("**********************************************************************");
         System.out.println("---------------------------装饰器模式测试开始----------------------------");
 
-        System.out.println("准备一辆中型观光车");
+        System.out.println("准备一辆中型观光小火车");
         TourBus bus = new MediumTourBus();
         System.out.println(bus.getName() + "已准备就绪");
 
-        System.out.println("启动四人观光车");
+        System.out.println("启动四人观光小火车");
         bus.run();
 
         System.out.println("---------------------------------------------------------------------");
-        System.out.println("为了提升游客体验，准备给观光车增加讲解员");
+        System.out.println("为了提升游客体验，准备给观光小火车增加讲解员");
         BusDecorator tourGuideBus = new TourGuideBusDecorator(bus);
         tourGuideBus.run();
 
@@ -105,40 +105,40 @@ public class TourBusStationTest {
     public void testFilter() {
         System.out.println("*****************************【过滤器模式展示】****************************");
         System.out.println("# 过滤器模式允许通过定义标准对对象集合进行过滤，得到符合条件的对象。");
-        System.out.println("# 本系统中，使用过滤器模式对观光车进行过滤，以筛选出符合不同条件的观光车。");
+        System.out.println("# 本系统中，使用过滤器模式对观光小火车进行过滤，以筛选出符合不同条件的观光小火车。");
         System.out.println("**********************************************************************");
         System.out.println("---------------------------过滤器模式测试开始----------------------------");
 
         List<TourBus> buses = new ArrayList<>();
-        System.out.println("添加一辆大型观光车，有 8 个座位");
+        System.out.println("添加一辆大型观光小火车，有 8 个座位");
         buses.add(new LargeTourBus());
-        System.out.println("添加一辆小型观光车，有 2 个座位");
+        System.out.println("添加一辆小型观光小火车，有 2 个座位");
         buses.add(new SmallTourBus());
-        System.out.println("再添加两辆大型观光车");
+        System.out.println("再添加两辆大型观光小火车");
         buses.add(new LargeTourBus());
         buses.add(new LargeTourBus());
-        System.out.println("添加一辆中型观光车，有 4 个座位");
+        System.out.println("添加一辆中型观光小火车，有 4 个座位");
         buses.add(new MediumTourBus());
-        System.out.println("再添加一辆小型观光车，有 2 个座位");
+        System.out.println("再添加一辆小型观光小火车，有 2 个座位");
         buses.add(new SmallTourBus());
 
-        System.out.println("当前观光车总览");
+        System.out.println("当前观光小火车总览");
         printBusesInfo(buses);
         System.out.println("---------------------------------------------------------------------");
 
-        System.out.println("过滤座位数小于5的观光车");
+        System.out.println("过滤座位数小于5的观光小火车");
         Criteria seatNoLessThan5 = new BusSeatLessThanFilter(5);
         printBusesInfo(seatNoLessThan5.meetCriteria(buses));
 
-        System.out.println("过滤座位数大于2的观光车");
+        System.out.println("过滤座位数大于2的观光小火车");
         Criteria seatNoMoreThan2 = new BusSeatMoreThanFilter(2);
         printBusesInfo(seatNoMoreThan2.meetCriteria(buses));
 
-        System.out.println("过滤座位数小于 4 或大于 4 的观光车");
+        System.out.println("过滤座位数小于 4 或大于 4 的观光小火车");
         Criteria andCriteria = new AndCriteria(new BusSeatLessThanFilter(4), new BusSeatMoreThanFilter(4));
         printBusesInfo(andCriteria.meetCriteria(buses));
 
-        System.out.println("过滤座位数小于 8 或大于 2 的观光车");
+        System.out.println("过滤座位数小于 8 或大于 2 的观光小火车");
         Criteria orCriteria = new OrCriteria(new BusSeatLessThanFilter(8), new BusSeatMoreThanFilter(2));
         printBusesInfo(orCriteria.meetCriteria(buses));
 
@@ -146,7 +146,7 @@ public class TourBusStationTest {
     }
     private void printBusesInfo(List<TourBus> buses) {
         if (buses.isEmpty()) {
-            System.out.println("没有符合条件的观光车");
+            System.out.println("没有符合条件的观光小火车");
             return;
         }
         for (TourBus bus : buses) {
@@ -225,33 +225,33 @@ public class TourBusStationTest {
         System.out.println("4. 可以通过深克隆保存对象状态，辅助实现撤销操作。");
         System.out.println("*******************************************************************************");
         System.out.println("-----------------------------原型模式测试开始------------------------------");
-        System.out.println("游乐园即将准备三种类型的观光车：小型、中型和大型。");
+        System.out.println("游乐园即将准备三种类型的观光小火车：小型、中型和大型。");
 
-        System.out.println("开始准备观光车...");
+        System.out.println("开始准备观光小火车...");
         BusCache.loadCache();
-        // 观光车哈希表准备就绪
-        System.out.println("观光车准备就绪，即将投入使用。");
+        // 观光小火车哈希表准备就绪
+        System.out.println("观光小火车准备就绪，即将投入使用。");
         BusCache.showCache();
 
         System.out.println("-------------------------------------------------------------------------------");
-        System.out.println("一队游客请求租用一辆中型观光车。");
-        TourBus mediumBus = BusCache.getBus("中型观光车");
-        System.out.printf("中型观光车，车辆编号：%d，座位数：%d，已准备就绪。\n", mediumBus.getBusId(), mediumBus.getSeatNum());
+        System.out.println("一队游客请求租用一辆中型观光小火车。");
+        TourBus mediumBus = BusCache.getBus("中型观光小火车");
+        System.out.printf("中型观光小火车，车辆编号：%d，座位数：%d，已准备就绪。\n", mediumBus.getBusId(), mediumBus.getSeatNum());
         mediumBus.run();
 
         System.out.println("-------------------------------------------------------------------------------");
-        System.out.println("一队游客请求租用一辆大型观光车。");
-        TourBus largeBus = BusCache.getBus("大型观光车");
-        System.out.printf("大型观光车，车辆编号：%d，座位数：%d，已准备就绪。\n", largeBus.getBusId(), largeBus.getSeatNum());
+        System.out.println("一队游客请求租用一辆大型观光小火车。");
+        TourBus largeBus = BusCache.getBus("大型观光小火车");
+        System.out.printf("大型观光小火车，车辆编号：%d，座位数：%d，已准备就绪。\n", largeBus.getBusId(), largeBus.getSeatNum());
         largeBus.run();
 
         System.out.println("-------------------------------------------------------------------------------");
-        System.out.println("另一队游客再次请求租用一辆大型观光车。");
-        TourBus anotherLargeBus = BusCache.getBus("大型观光车");
-        System.out.printf("另一辆大型观光车，车辆编号：%d，座位数：%d，已准备就绪。\n", anotherLargeBus.getBusId(), anotherLargeBus.getSeatNum());
+        System.out.println("另一队游客再次请求租用一辆大型观光小火车。");
+        TourBus anotherLargeBus = BusCache.getBus("大型观光小火车");
+        System.out.printf("另一辆大型观光小火车，车辆编号：%d，座位数：%d，已准备就绪。\n", anotherLargeBus.getBusId(), anotherLargeBus.getSeatNum());
         largeBus.run();
 
-        System.out.println("这两辆大型观光车是否为同一辆？ " + (largeBus == anotherLargeBus));
+        System.out.println("这两辆大型观光小火车是否为同一辆？ " + (largeBus == anotherLargeBus));
         System.out.println("-----------------------------原型模式测试结束------------------------------");
 
     }

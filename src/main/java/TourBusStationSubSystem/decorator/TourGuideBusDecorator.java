@@ -3,8 +3,8 @@ package TourBusStationSubSystem.decorator;
 import TourBusStationSubSystem.Bus;
 
 /**
- * TourGuideBusDecorator 类是一个装饰器，用于给观光车添加讲解员。
- * 通过此装饰器可以为观光车增加额外的功能，而不改变原有车辆的结构。
+ * TourGuideBusDecorator 类是一个装饰器，用于给观光小火车添加讲解员。
+ * 通过此装饰器可以为观光小火车增加额外的功能，而不改变原有车辆的结构。
  */
 public class TourGuideBusDecorator extends BusDecorator {
 
@@ -24,6 +24,6 @@ public class TourGuideBusDecorator extends BusDecorator {
 
     @Override
     public void desc() {
-        System.out.println("配备讲解员的观光车");
+        System.out.println("配备讲解员的观光小火车");
     }
 }

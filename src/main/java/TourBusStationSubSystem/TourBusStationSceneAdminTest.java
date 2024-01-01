@@ -15,27 +15,27 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * MuiltVisitorScene 类模拟了多个游客同时租赁观光车的场景。
- * 该类展示了如何使用对象池模式来管理观光车的分配，以及过滤器模式来筛选特定类型的观光车。
+ * MuiltVisitorScene 类模拟了多个游客同时租赁观光小火车的场景。
+ * 该类展示了如何使用对象池模式来管理观光小火车的分配，以及过滤器模式来筛选特定类型的观光小火车。
  */
 public class TourBusStationSceneAdminTest {
 
     public static void main(String[] args) {
-        System.out.println("观光车站今日迎来众多游客，需求量较高。");
+        System.out.println("观光小火车站今日迎来众多游客，需求量较高。");
 
-        int totalBusNum = 6; // 总共需要的观光车数量
-        System.out.println("共有 " + totalBusNum + " 位游客，他们将租赁观光车进行旅游。");
+        int totalBusNum = 6; // 总共需要的观光小火车数量
+        System.out.println("共有 " + totalBusNum + " 位游客，他们将租赁观光小火车进行旅游。");
         System.out.println("---------------------------------------------------------------------");
 
-        // 初始化观光车对象池
-        System.out.println("初始化观光车对象池...");
+        // 初始化观光小火车对象池
+        System.out.println("初始化观光小火车对象池...");
 
         int minObject = 4, maxObject = 8, delay = 5; // 对象池的最小和最大数量及调整延时
 
         BusPool<TourBus> busPool = new BusPool<>(minObject, maxObject, delay) {
             @Override
             protected TourBus createObject() {
-                // 随机选择一种类型的观光车
+                // 随机选择一种类型的观光小火车
                 return switch (new Random().nextInt(TourBus.busClassNum)) {
                     case 0 -> new SmallTourBus();
                     case 1 -> new MediumTourBus();
@@ -62,19 +62,19 @@ public class TourBusStationSceneAdminTest {
         }
         System.out.println("---------------------------------------------------------------------");
 
-        // 使用过滤器模式寻找特定类型的观光车
-        System.out.println("现在检查对象池中的观光车情况...");
+        // 使用过滤器模式寻找特定类型的观光小火车
+        System.out.println("现在检查对象池中的观光小火车情况...");
 
         List<TourBus> buses = new ArrayList<>();
         for (int i = 0; i < totalBusNum; i++) {
             buses.add(busPool.borrowObject());
         }
 
-        System.out.println("寻找座位数量为中等的观光车...");
-        System.out.println("筛选出座位数介于 4 至 8 之间的中型观光车：");
+        System.out.println("寻找座位数量为中等的观光小火车...");
+        System.out.println("筛选出座位数介于 4 至 8 之间的中型观光小火车：");
         Criteria and = new AndCriteria(new BusSeatLessThanFilter(8+1), new BusSeatMoreThanFilter(4-1));
         for (TourBus bus: and.meetCriteria(buses)) {
-            System.out.println("编号为 " + bus.getBusId() + " 的观光车是 " + bus.getName());
+            System.out.println("编号为 " + bus.getBusId() + " 的观光小火车是 " + bus.getName());
         }
 
         // 关闭对象池

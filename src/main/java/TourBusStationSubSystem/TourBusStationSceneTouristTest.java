@@ -13,18 +13,18 @@ public class TourBusStationSceneTouristTest {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("欢迎来到观光车站子系统～");
-        System.out.println("在本子系统中，你可以乘坐观光车对整个游乐场进行游览");
-        System.out.println("游乐场正在准备观光车...");
+        System.out.println("欢迎来到观光小火车站子系统～");
+        System.out.println("在本子系统中，你可以乘坐观光小火车对整个游乐场进行游览");
+        System.out.println("游乐场正在准备观光小火车...");
         BusCache.loadCache();
         System.out.println(" ");
 
         System.out.println(
                 """
-                游乐场准备了三种类型的观光车，如下：
-                1.小型观光车（2人座）
-                2.中型观光车（4人座）
-                3.大型观光车（8人座）
+                游乐场准备了三种类型的观光小火车，如下：
+                1.小型观光小火车（2人座）
+                2.中型观光小火车（4人座）
+                3.大型观光小火车（8人座）
                 4.退出
                 """
         );
@@ -39,9 +39,9 @@ public class TourBusStationSceneTouristTest {
                 choice = scanner.nextLine();
             }
             switch (choice.charAt(0)) {
-                case '1' -> bus = BusCache.getBus("小型观光车");
-                case '2' -> bus = BusCache.getBus("中型观光车");
-                case '3' -> bus = BusCache.getBus("大型观光车");
+                case '1' -> bus = BusCache.getBus("小型观光小火车");
+                case '2' -> bus = BusCache.getBus("中型观光小火车");
+                case '3' -> bus = BusCache.getBus("大型观光小火车");
                 case '4' -> {
                     return;
                 }
@@ -53,7 +53,7 @@ public class TourBusStationSceneTouristTest {
         PaintColor color = null;
         System.out.println(
                 """
-                每种类型的观光车都有不同的颜色可选，如下：
+                每种类型的观光小火车都有不同的颜色可选，如下：
                 1.蓝色 Blue
                 2.粉色 Pink
                 3.黄色 Yellow
@@ -62,7 +62,7 @@ public class TourBusStationSceneTouristTest {
         );
 
         while (color == null) {
-            System.out.println("请选择观光车的颜色：");
+            System.out.println("请选择观光小火车的颜色：");
             choice = scanner.nextLine();
             while (choice.isEmpty()) {
                 choice = scanner.nextLine();
@@ -77,7 +77,7 @@ public class TourBusStationSceneTouristTest {
                 default -> System.out.println("输入错误，请重新输入");
             }
         }
-        System.out.println("观光车" + color.paint());
+        System.out.println("观光小火车" + color.paint());
         ((TourBus) bus).setColor(color);
         bus.desc();
 

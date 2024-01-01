@@ -6,7 +6,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 泛型类 BusPool，实现观光车对象池。
+ * 泛型类 BusPool，实现观光小火车对象池。
  * 对象池用于管理一组可重用的对象实例。
  *
  * @param <T> 对象池管理的对象类型

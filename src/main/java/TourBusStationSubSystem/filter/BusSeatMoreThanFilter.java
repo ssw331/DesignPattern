@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * BusSeatMoreThanFilter 类实现了 Criteria 接口
- * 用于过滤座位数大于指定值的观光车。
+ * 用于过滤座位数大于指定值的观光小火车。
  */
 public class BusSeatMoreThanFilter implements Criteria {
 
