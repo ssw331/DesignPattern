@@ -20,8 +20,6 @@ public class AmusementParkSceneTest {
         System.out.println("在本子系统中，你可以模拟工作人员进行园区管理相关工作哦");
         System.out.println("---------------------------------------------------------------------");
 
-
-
         System.out.println("滴！打卡成功，早安打工人，请选择你的工作任务吧~");
         System.out.println(
                 """
@@ -35,7 +33,7 @@ public class AmusementParkSceneTest {
                 """
         );
         String choice= null;
-        while(choice == null){
+        while(!"7".equals(choice)){
             System.out.println("请输入您选择的任务：");
             choice = scanner.nextLine();
             while (choice.isEmpty()) {
@@ -48,9 +46,15 @@ public class AmusementParkSceneTest {
                     amusementpark.workers.ParkManager director = new amusementpark.workers.ParkManager("Bob");
 
                     Task dailyTask = new DailyManagementTask();
-                    director.delegateTask(dailyTask,manager);}
+                    director.delegateTask(dailyTask,manager);
+                    System.out.println("---------------------------------------------------------------------");
+                }
                 case '2' -> {
+//                    if (scanner.hasNextLine()) {
+//                        scanner.nextLine();
+//                    }
                     // 创建安保设备
+                   // Scanner scanner2 = new Scanner(System.in);
                     SecurityDevice camera = new Camera();
                     SecurityDevice infraredSensor = new InfraredSensor();
                     SecurityDevice doorLock = new DoorLock();
@@ -65,7 +69,16 @@ public class AmusementParkSceneTest {
 
                     // 创建一个命令的调用者
                     SecurityControl control = new SecurityControl();
+                    System.out.println("请输入你想要执行的操作：");
+                    System.out.println("1. 打开摄像头");
+                    System.out.println("2. 关闭摄像头");
+                    System.out.println("3. 打开红外线感应器");
+                    System.out.println("4. 关闭红外线感应器");
+                    System.out.println("5. 打开门锁");
+                    System.out.println("6. 关闭门锁");
+                    System.out.println("7. 退出");
 
+<<<<<<< Updated upstream
                     Scanner scanner2 = new Scanner(System.in);
                     for (int choice2 = 1; choice2 < 7; choice2++) {
                         System.out.println("请输入你想要执行的操作：");
@@ -76,6 +89,10 @@ public class AmusementParkSceneTest {
                         System.out.println("5. 打开门锁");
                         System.out.println("6. 关闭门锁");
                         System.out.println("7. 退出");
+=======
+                    while(true){
+                        int choice2 = scanner.nextInt();
+>>>>>>> Stashed changes
                         switch (choice2) {
                             case 1:
                                 control.setCommand(turnOnCamera);
@@ -96,15 +113,19 @@ public class AmusementParkSceneTest {
                                 control.setCommand(turnOffDoorLock);
                                 break;
                             case 7:
-                                System.out.println("退出系统...");
-                                scanner.close();
-                                return;
-                            default:
-                                System.out.println("无效的输入，请重新输入！");
-                                continue;
+                                System.out.println("退出安保系统...");
+                                //scanner2.close();
+                                break;
+//                            default:
+//                                System.out.println("无效的输入，请重新输入！");
+//                                continue;
                         }
+                        if (choice2==7)
+                            break;
                         System.out.println("正在执行操作...");
                         control.pressButton();
+                        System.out.println("---------------------------------------------------------------------");
+
 
                     }
                 }
@@ -122,6 +143,7 @@ public class AmusementParkSceneTest {
                     rollerCoaster.setStatus("运行中");
 
                     ferrisWheel.setStatus("故障");
+                    System.out.println("---------------------------------------------------------------------");
                 }
                 case '4' ->{
 
@@ -133,6 +155,7 @@ public class AmusementParkSceneTest {
                     restaurantService.publishUpdate("园区餐厅上新!");
 
                     blackboard.displayMessages();
+                    System.out.println("---------------------------------------------------------------------");
 
                 }
                 case '5' ->{
@@ -154,6 +177,7 @@ public class AmusementParkSceneTest {
                     //只有Alice收到订阅消息
                     System.out.println("更新排队人数为3人");
                     rollerCoasterQueue.setQueueLength(3);
+                    System.out.println("---------------------------------------------------------------------");
                 }
                 case '6' -> {
                     ParkManager parkManager = new ParkManager("Alice");
@@ -181,8 +205,10 @@ public class AmusementParkSceneTest {
                     teamLeader2.addTeamMember(staff4);
 
                     parkManager.displayDetails();
+                    System.out.println("---------------------------------------------------------------------");
                 }
                 case '7' -> {
+                    System.out.println("恭喜下班！");
                     return;
                 }
                 default -> System.out.println("输入错误，请重新输入");
